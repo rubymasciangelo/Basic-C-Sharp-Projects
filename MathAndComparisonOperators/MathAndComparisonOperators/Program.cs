@@ -24,9 +24,12 @@ namespace MathAndComparisonOperators
             //Console.WriteLine(product);
             //Console.Read();
 
-            int quotient = 100 / 5;
+            //int quotient = 100 / 5;
+            //Console.WriteLine(quotient);
+            //Console.ReadLine();
+
+            double quotient = 100.0 / 17.0;
             Console.WriteLine(quotient);
-            Console.ReadLine();
         }
     }
 }
