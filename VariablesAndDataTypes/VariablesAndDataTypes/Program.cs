@@ -10,10 +10,11 @@ namespace VariablesAndDataTypes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is your name?");
-            string yourName = Console.ReadLine();
-            Console.WriteLine(yourName + " is a dumb name!");
-            Console.Read();
+            // This is a simple program
+            //Console.WriteLine("What is your name?");
+            //string yourName = Console.ReadLine();
+            //Console.WriteLine(yourName + " is a dumb name!");
+            //Console.Read();
         }
     }
 }
