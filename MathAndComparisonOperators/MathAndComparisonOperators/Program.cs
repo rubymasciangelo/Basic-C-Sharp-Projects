@@ -28,8 +28,11 @@ namespace MathAndComparisonOperators
             //Console.WriteLine(quotient);
             //Console.ReadLine();
 
-            double quotient = 100.0 / 17.0;
-            Console.WriteLine(quotient);
+            //double quotient = 100.0 / 17.0;
+            //Console.WriteLine(quotient);
+
+            int remainder = 10 % 2;
+            Console.WriteLine(remainder);
         }
     }
 }
