@@ -12,17 +12,17 @@ namespace pickANumberExercise
         {
             Console.WriteLine("Write any number: ");
             string numResponse = Console.ReadLine();
-            long inputNum = Convert.ToUInt32(numResponse);
-            long multiply = inputNum * 50;
+            UInt32 inputNum = Convert.ToUInt32(numResponse);
+            UInt32 multiply = inputNum * 50;
             Console.WriteLine(inputNum + " multiplied by 50 is " + multiply);
-            long add = inputNum + 25;
+            UInt32 add = inputNum + 25;
             Console.WriteLine(inputNum + " added to 25 is " + add);
             double divide = inputNum / 12.5;
             Console.WriteLine(inputNum + "divided by 12.5 is " + divide);
             bool compare = inputNum > 50;
             Console.WriteLine(inputNum + " is greater than 50?");
             Console.WriteLine(compare);
-            long remainder = inputNum % 7;
+            UInt32 remainder = inputNum % 7;
             Console.WriteLine(inputNum + " divided by 7 has a remainder of " + remainder);
             Console.Read();
         }
