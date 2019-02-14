@@ -19,6 +19,9 @@ namespace pickANumberExercise
             Console.WriteLine(inputNum + " added to 25 is " + add);
             double divide = inputNum / 12.5;
             Console.WriteLine(inputNum + "divided by 12.5 is " + divide);
+            bool compare = inputNum > 50;
+            Console.WriteLine(inputNum + " is greater than 50?");
+            Console.WriteLine(compare);
 
         }
     }
