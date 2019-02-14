@@ -22,7 +22,9 @@ namespace pickANumberExercise
             bool compare = inputNum > 50;
             Console.WriteLine(inputNum + " is greater than 50?");
             Console.WriteLine(compare);
-
+            int remainder = inputNum % 7;
+            Console.WriteLine(inputNum + " divided by 7 has a remainder of " + remainder);
+            Console.Read();
         }
     }
 }
