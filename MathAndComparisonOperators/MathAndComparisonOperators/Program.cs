@@ -38,9 +38,9 @@ namespace MathAndComparisonOperators
             //Console.WriteLine(trueOrFalse.ToString());
 
             int roomTemp = 70;
-            int currentTemp = 72;
+            int currentTemp = 70;
 
-            bool isWarm = currentTemp > roomTemp;
+            bool isWarm = currentTemp >= roomTemp;
             Console.WriteLine(isWarm);
         }
     }
