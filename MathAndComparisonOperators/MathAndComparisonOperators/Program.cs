@@ -20,10 +20,13 @@ namespace MathAndComparisonOperators
             //Console.WriteLine("math " + difference.ToString());
             //Console.ReadLine();
 
-            int product = 10 * 5;
-            Console.WriteLine(product);
-            Console.Read();
+            //int product = 10 * 5;
+            //Console.WriteLine(product);
+            //Console.Read();
 
+            int quotient = 100 / 5;
+            Console.WriteLine(quotient);
+            Console.ReadLine();
         }
     }
 }
