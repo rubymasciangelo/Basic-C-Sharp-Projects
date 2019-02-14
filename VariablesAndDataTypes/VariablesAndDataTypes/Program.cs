@@ -32,9 +32,17 @@ namespace VariablesAndDataTypes
             //float secondsLeft = 2.62f;
             //short tempOnMars = -341;
 
+            int currentAge = 30;
+            string yearsOld = currentAge.ToString();
 
-            Console.WriteLine(questionMark);
+            bool isRaining = true;
+            string rainingStatus = Convert.ToString(isRaining);
+            Console.WriteLine(rainingStatus);
             Console.ReadLine();
+
+
+            //Console.WriteLine(questionMark);
+            //Console.ReadLine();
        
         }
     }
