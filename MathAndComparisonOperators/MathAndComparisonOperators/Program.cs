@@ -34,8 +34,14 @@ namespace MathAndComparisonOperators
             //int remainder = 10 % 2;
             //Console.WriteLine(remainder);
 
-            bool trueOrFalse = 12 > 5;
-            Console.WriteLine(trueOrFalse.ToString());
+            //bool trueOrFalse = 12 > 5;
+            //Console.WriteLine(trueOrFalse.ToString());
+
+            int roomTemp = 70;
+            int currentTemp = 72;
+
+            bool isWarm = currentTemp > roomTemp;
+            Console.WriteLine(isWarm);
         }
     }
 }
