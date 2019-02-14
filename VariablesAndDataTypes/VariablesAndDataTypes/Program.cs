@@ -16,12 +16,12 @@ namespace VariablesAndDataTypes
             //Console.WriteLine(yourName + " is a dumb name!");
             //Console.Read();
 
-            Console.WriteLine("What is your favorite number?");
-            string favoriteNumber = Console.ReadLine();
-            int faveNum = Convert.ToInt32(favoriteNumber);
-            int total = faveNum + 5;
-            Console.WriteLine("Your favorite number plus 5 is: " + total);
-            Console.ReadLine();
+            //Console.WriteLine("What is your favorite number?");
+            //string favoriteNumber = Console.ReadLine();
+            //int faveNum = Convert.ToInt32(favoriteNumber);
+            //int total = faveNum + 5;
+            //Console.WriteLine("Your favorite number plus 5 is: " + total);
+            //Console.ReadLine();
         }
     }
 }
