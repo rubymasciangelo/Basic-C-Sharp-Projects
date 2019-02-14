@@ -16,9 +16,14 @@ namespace MathAndComparisonOperators
             //Console.WriteLine(combined);
             //Console.ReadLine();
 
-            int difference = 10 - 5;
-            Console.WriteLine("math " + difference.ToString());
-            Console.ReadLine();
+            //int difference = 10 - 5;
+            //Console.WriteLine("math " + difference.ToString());
+            //Console.ReadLine();
+
+            int product = 10 * 5;
+            Console.WriteLine(product);
+            Console.Read();
+
         }
     }
 }
