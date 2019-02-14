@@ -12,7 +12,7 @@ namespace pickANumberExercise
         {
             Console.WriteLine("Write any number: ");
             string numResponse = Console.ReadLine();
-            long inputNum = Convert.ToInt64(numResponse);
+            long inputNum = Convert.ToUInt32(numResponse);
             long multiply = inputNum * 50;
             Console.WriteLine(inputNum + " multiplied by 50 is " + multiply);
             long add = inputNum + 25;
