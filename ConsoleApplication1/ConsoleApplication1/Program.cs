@@ -7,6 +7,7 @@ namespace ConsoleApplication1
         static void Main()
         {
             Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
         }
     }
 }
