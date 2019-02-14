@@ -17,6 +17,9 @@ namespace pickANumberExercise
             Console.WriteLine(inputNum + " multiplied by 50 is " + multiply);
             int add = inputNum + 25;
             Console.WriteLine(inputNum + " added to 25 is " + add);
+            double divide = inputNum / 12.5;
+            Console.WriteLine(inputNum + "divided by 12.5 is " + divide);
+
         }
     }
 }
