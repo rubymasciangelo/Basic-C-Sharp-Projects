@@ -14,7 +14,9 @@ namespace pickANumberExercise
             string numResponse = Console.ReadLine();
             int inputNum = Convert.ToInt32(numResponse);
             int multiply = inputNum * 50;
-            Console.WriteLine("Your number multiplied by 50 is " + multiply);
+            Console.WriteLine(inputNum + " multiplied by 50 is " + multiply);
+            int add = inputNum + 25;
+            Console.WriteLine(inputNum + " added to 25 is " + add);
         }
     }
 }
