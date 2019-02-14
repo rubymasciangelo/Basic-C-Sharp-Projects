@@ -15,6 +15,11 @@ namespace VariablesAndDataTypes
             //string yourName = Console.ReadLine();
             //Console.WriteLine(yourName + " is a dumb name!");
             //Console.Read();
+
+            Console.WriteLine("What is your favorite number?");
+            string favoriteNumber = Console.ReadLine();
+            Console.WriteLine("Your favorite number is: " + favoriteNumber);
+            Console.ReadLine();
         }
     }
 }
