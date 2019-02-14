@@ -23,14 +23,14 @@ namespace VariablesAndDataTypes
             //Console.WriteLine("Your favorite number plus 5 is: " + total);
             //Console.ReadLine();
 
-            bool isStudying = false;
-            byte hoursWorked = 42;
-            sbyte currentTemperature = -23;
-            char questionMark = '\u2103';
-            decimal moneyInBank = 100.5m;
-            double heightInCm = 211.41431321;
-            float secondsLeft = 2.62f;
-            short tempOnMars = -341;
+            //bool isStudying = false;
+            //byte hoursWorked = 42;
+            //sbyte currentTemperature = -23;
+            //char questionMark = '\u2103';
+            //decimal moneyInBank = 100.5m;
+            //double heightInCm = 211.41431321;
+            //float secondsLeft = 2.62f;
+            //short tempOnMars = -341;
 
 
             Console.WriteLine(questionMark);
