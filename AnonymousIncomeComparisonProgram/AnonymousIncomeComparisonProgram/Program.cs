@@ -41,6 +41,7 @@ namespace AnonymousIncomeComparisonProgram
             Console.Read();
 
             Console.WriteLine("Does Person 1 make more money than Person 2?");
+            Console.Read();
             bool salaryCompare = salaryOne > salaryTwo;
             Console.WriteLine(salaryCompare.ToString());
             Console.Read();
