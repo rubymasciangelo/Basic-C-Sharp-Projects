@@ -15,33 +15,33 @@ namespace AnonymousIncomeComparisonProgram
             Console.WriteLine("Person 1");
             Console.Read();
             Console.WriteLine("What is your hourly rate?");
-            string rateResponse1 = Console.ReadLine();
-            decimal rate1 = Convert.ToDecimal(rateResponse1);
+            string rateResponseOne = Console.ReadLine();
+            decimal rateOne = Convert.ToDecimal(rateResponseOne);
             Console.WriteLine("How many hours do you work per week?");
-            string hoursResponse1 = Console.ReadLine();
-            int hours1 = Convert.ToInt16(hoursResponse1);
-            decimal salary1 = rate1 * hours1;
+            string hoursResponseOne = Console.ReadLine();
+            int hoursOne = Convert.ToInt16(hoursResponseOne);
+            decimal salaryOne = rateOne * hoursOne;
             Console.Read();
 
             Console.WriteLine("Person 2");
             Console.WriteLine("What is your hourly rate?");
-            string rateResponse2 = Console.ReadLine();
+            string rateResponseTwo = Console.ReadLine();
             Console.Read();
             Console.WriteLine("How many hours do you work per week?");
-            string hoursResponse2 = Console.ReadLine();
-            int hoursTwo = Convert.ToInt16(hoursResponse2);
-            decimal rateTwo = Convert.ToDecimal(rateResponse2);
-            decimal salary2 = rateTwo * hoursTwo;
+            string hoursResponseTwo = Console.ReadLine();
+            int hoursTwo = Convert.ToInt16(hoursResponseTwo);
+            decimal rateTwo = Convert.ToDecimal(rateResponseTwo);
+            decimal salaryTwo = rateTwo * hoursTwo;
             Console.Read();
             
-            Console.WriteLine("Weekly salary of Person 1: " + salary1);
+            Console.WriteLine("Weekly salary of Person 1: " + salaryOne);
             Console.Read();
             
-            Console.WriteLine("Weekly salary of Person 2: " + salary2);
+            Console.WriteLine("Weekly salary of Person 2: " + salaryTwo);
             Console.Read();
 
             Console.WriteLine("Does Person 1 make more money than Person 2?");
-            bool salaryCompare = salary1 > salary2;
+            bool salaryCompare = salaryOne > salaryTwo;
             Console.WriteLine(salaryCompare.ToString());
             Console.Read();
             
