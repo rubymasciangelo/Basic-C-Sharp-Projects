@@ -30,6 +30,8 @@ namespace BooleanLogic
             Console.WriteLine(true ^ false);
             Console.WriteLine(true ^ false);
             //one is true but not both
+
+
         }
     }
 }
