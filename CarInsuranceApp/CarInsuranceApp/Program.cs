@@ -25,6 +25,11 @@ namespace CarInsuranceApp
             string ticketsResponse = Console.ReadLine();
             int tickets = Convert.ToInt16(ticketsResponse);
             Console.Read();
+
+            Console.WriteLine("Have you qualified for car insurance with us?");
+            Console.Read();
+            Console.WriteLine(age > 15 && DUI == false && tickets <= 3);
+            Console.Read();
         }
     }
 }
