@@ -18,7 +18,7 @@ namespace CarInsuranceApp
 
             Console.WriteLine("Have you ever had a DUI?");
             string duiResponse = Console.ReadLine();
-            bool DUI = Convert.ToBoolean(duiResponse);
+            bool dui = Convert.ToBoolean(duiResponse);
             Console.Read();
 
             Console.WriteLine("How many speeding tickets do you have?");
@@ -28,7 +28,7 @@ namespace CarInsuranceApp
 
             Console.WriteLine("Have you qualified for car insurance with us?");
             Console.Read();
-            Console.WriteLine(age > 15 && DUI == false && tickets <= 3);
+            Console.WriteLine(age > 15 && dui == false && tickets <= 3);
             Console.Read();
         }
     }
