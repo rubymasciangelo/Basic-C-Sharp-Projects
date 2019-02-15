@@ -24,16 +24,16 @@ namespace AnonymousIncomeComparisonProgram
             Console.Read();
 
             Console.WriteLine("Person 2");
+            Console.Read();
             Console.WriteLine("What is your hourly rate?");
             string rateResponseTwo = Console.ReadLine();
             decimal rateTwo = Convert.ToDecimal(rateResponseTwo);
-            Console.Read();
             Console.WriteLine("How many hours do you work per week?");
             string hoursResponseTwo = Console.ReadLine();
             int hoursTwo = Convert.ToInt16(hoursResponseTwo);
             decimal salaryTwo = rateTwo * hoursTwo;
             Console.Read();
-            
+
             Console.WriteLine("Weekly salary of Person 1: " + salaryOne);
             Console.Read();
             
