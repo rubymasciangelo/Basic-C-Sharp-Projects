@@ -29,9 +29,9 @@ namespace AnonymousIncomeComparisonProgram
             Console.Read();
             Console.WriteLine("How many hours do you work per week?");
             string hoursResponse2 = Console.ReadLine();
-            int hours2 = Convert.ToInt16(hoursResponse2);
+            int hoursTwo = Convert.ToInt16(hoursResponse2);
             decimal rateTwo = Convert.ToDecimal(rateResponse2);
-            decimal salary2 = rateTwo * hours2;
+            decimal salary2 = rateTwo * hoursTwo;
             Console.Read();
             
             Console.WriteLine("Weekly salary of Person 1: " + salary1);
