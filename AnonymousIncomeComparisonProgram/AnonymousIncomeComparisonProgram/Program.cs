@@ -29,16 +29,19 @@ namespace AnonymousIncomeComparisonProgram
             Console.WriteLine("How many hours do you work per week?");
             string hoursResponse2 = Console.ReadLine();
             int hours2 = Convert.ToInt16(hoursResponse2);
+            decimal salary2 = rate2 * hours2;
             Console.Read();
             
             Console.WriteLine("Weekly salary of Person 1: " + salary1);
             Console.Read();
-            decimal salary2 = rate2 * hours2;
+            
             Console.WriteLine("Weekly salary of Person 2: " + salary2);
             Console.Read();
+
             Console.WriteLine("Does Person 1 make more money than Person 2?");
             bool salaryCompare = salary1 > salary2;
             Console.WriteLine(salaryCompare.ToString());
+            Console.Read();
             
 
 
