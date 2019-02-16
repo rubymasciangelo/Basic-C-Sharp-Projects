@@ -23,7 +23,14 @@ namespace PackageExpress
             }
             else
             {
+                Console.WriteLine("What is the width of the package?");
+                int width = Convert.ToInt16(Console.ReadLine());
 
+                Console.WriteLine("What is the height of the package?");
+                int height = Convert.ToInt16(Console.ReadLine());
+
+                Console.WriteLine("What is the length of the package?");
+                int length = Convert.ToInt16(Console.WriteLine());
             }
         }
     }
