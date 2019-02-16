@@ -10,17 +10,21 @@ namespace Strings
     {
         static void Main(string[] args)
         {
-            string name = "Jesse";
-            string quote = "The man said, \\Henlo\", Jesse. \n Hello on a new line. \n \t Hello on a tab.";
-            string fileName = @"C:\\Users\\Jesse";
+            //string name = "Jesse";
+            //string quote = "The man said, \\Henlo\", Jesse. \n Hello on a new line. \n \t Hello on a tab.";
+            //string fileName = @"C:\\Users\\Jesse";
 
-            bool tOrF = name.Contains("s");
-            tOrF = name.EndsWith("s");
+            //bool tOrF = name.Contains("s");
+            //tOrF = name.EndsWith("s");
 
-            int length = name.Length;
+            //int length = name.Length;
 
-            name = name.ToUpper();
+            //name = name.ToUpper();
 
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("My name is Jesse");
+            //object can expand and collapse without expensive memmory overhead 
 
         }
     }
