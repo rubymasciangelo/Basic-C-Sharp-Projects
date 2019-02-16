@@ -13,7 +13,7 @@ namespace Branching
             int currentTemp = 80;
             int roomTemp = 70;
 
-            string compareResults = currentTemp == roomTemp ? "It is room temp" : "it is not room temp";
+            //string compareResults = currentTemp == roomTemp ? "It is room temp" : "it is not room temp";
 
             //if (currentTemp == roomTemp)
             //{
