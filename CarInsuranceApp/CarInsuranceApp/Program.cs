@@ -26,7 +26,7 @@ namespace CarInsuranceApp
             
 
             Console.WriteLine("Have you qualified for car insurance with us?");
-            Console.Read();
+            
             Console.WriteLine(age > 15 && duiStatus == false && tickets <= 3);
             Console.Read();
         }
