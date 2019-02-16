@@ -11,7 +11,7 @@ namespace PackageExpress
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Package Express. Please follow the instructions below.");
-            Console.Read();
+            
 
             Console.WriteLine("What is the weight of the package?");
             int weight = Convert.ToInt16(Console.ReadLine());
@@ -42,6 +42,7 @@ namespace PackageExpress
                 {
                     decimal quote = ((width + length + height) * weight) / 100;
                     Console.WriteLine("Your total estimated shipping cost for this package is: $" + quote);
+                    Console.Read();
                 }
             }
         }
