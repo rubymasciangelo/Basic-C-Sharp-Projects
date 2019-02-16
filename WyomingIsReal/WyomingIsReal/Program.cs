@@ -35,7 +35,7 @@ namespace WyomingIsReal
             string state = Console.ReadLine();
             bool america = state != "Wyoming";
 
-            while (1=1)
+            while (true)
             {
                 switch (state)
                 {
