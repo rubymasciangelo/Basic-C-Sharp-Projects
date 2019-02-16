@@ -16,7 +16,7 @@ namespace CarInsuranceApp
             int age = Convert.ToInt16(ageResponse);
             
 
-            Console.WriteLine("Have you ever had a DUI? Please answer with either " + '"' + "true" + '"' + "or" + '"' + "false" + '"');
+            Console.WriteLine("True or False: You have gotten a dui. Please answer with either " + '"' + "true" + '"' + " or " + '"' + "false" + '"');
             string duiResponse = Console.ReadLine();
             bool duiStatus = Convert.ToBoolean(duiResponse);
 
