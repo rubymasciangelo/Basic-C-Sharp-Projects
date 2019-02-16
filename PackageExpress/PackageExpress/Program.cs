@@ -31,6 +31,18 @@ namespace PackageExpress
 
                 Console.WriteLine("What is the length of the package?");
                 int length = Convert.ToInt16(Console.ReadLine());
+
+                if (width + length + height > 50)
+                {
+                    Console.WriteLine("Package too big to be shipped via Package Express.");
+                    Console.Read();
+                }
+
+                else
+                {
+                    decimal quote = ((width + length + height) * weight) / 100;
+                    Console.WriteLine("Your total estimated shipping cost for this package is: $" + quote);
+                }
             }
         }
     }
