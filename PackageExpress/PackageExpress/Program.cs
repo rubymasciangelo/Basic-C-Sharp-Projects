@@ -30,7 +30,7 @@ namespace PackageExpress
                 int height = Convert.ToInt16(Console.ReadLine());
 
                 Console.WriteLine("What is the length of the package?");
-                int length = Convert.ToInt16(Console.WriteLine());
+                int length = Convert.ToInt16(Console.ReadLine());
             }
         }
     }
