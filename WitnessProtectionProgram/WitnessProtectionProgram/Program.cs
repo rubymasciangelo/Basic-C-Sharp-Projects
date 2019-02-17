@@ -48,6 +48,37 @@ namespace WitnessProtectionProgram
 
             Console.WriteLine("Your new age is " + ages[newAge] + " years old.");
             Console.ReadLine();
+
+            List<string> spiceGirls = new List<string>();
+            spiceGirls.Add("Ginger Spice");
+            spiceGirls.Add("Lost Spice");
+            spiceGirls.Add("Scary Spice");
+            spiceGirls.Add("Baby Spice");
+            spiceGirls.Add("Pumpkin Spice");
+            spiceGirls.Add("Sporty Spice");
+            spiceGirls.Add("Spider Spice");
+            spiceGirls.Add("Melon Spice");
+            spiceGirls.Add("Sigourney Spice");
+
+            Console.WriteLine("Pick a number between 0 and 8:");
+            int newFaveSpice = Convert.ToInt16(Console.ReadLine());
+
+            while (newFaveSpice > 8)
+            {
+                switch (newFaveSpice)
+                {
+                    default:
+                        Console.WriteLine("Whoa there, let's keep it between 0 and 8.");
+                        Console.WriteLine("Try again:");
+                        newFaveSpice = Convert.ToInt16(Console.ReadLine());
+                        break;
+                }
+            }
+
+            Console.WriteLine("Your new favorite Spice Girl is " + spiceGirls[newFaveSpice]);
+            Console.ReadLine();
+            Console.WriteLine("Enjoy ur new life lmao");
+            Console.Read();
         }
     }
 }
