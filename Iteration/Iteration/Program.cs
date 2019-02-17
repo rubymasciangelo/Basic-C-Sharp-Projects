@@ -44,6 +44,16 @@ namespace Iteration
                     Console.WriteLine("Passing test score: " + score);
                 }
 
+                List<string> names1 = new List<string>() { "Jesse", "Erik", "Adam", "Daniel" };
+
+                foreach (string name1 in names1)
+                {
+                    if (name1 == "Jesse")
+                    {
+                        Console.WriteLine(name1);
+                    }
+                }
+
                 Console.ReadLine();
 
            
