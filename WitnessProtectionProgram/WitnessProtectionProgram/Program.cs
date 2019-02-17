@@ -16,8 +16,18 @@ namespace WitnessProtectionProgram
 
             if (newName > 5)
             {
-                Console.WriteLine("Whoa there, let's keep it between 0 and 5.");
-                Console.WriteLine("Try again:");
+                do
+                {
+                    switch (newName)
+                    {
+                        default:
+                            Console.WriteLine("Whoa there, let's keep it between 0 and 5.");
+                            Console.WriteLine("Try again:");
+                            newName = Convert.ToInt16(Console.ReadLine());
+                            break;
+                    }
+                }
+                while (newName > 5);
             }
 
             else
