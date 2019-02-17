@@ -22,8 +22,8 @@ using System.Collections.Generic;
         numArray2[5] = 650;
         //changing value
 
-        List<int> intList = new List<int>();
-        intList.Add(4);
+        List<string> intList = new List<string>();
+        intList.Add("Hello");
         intList.Add(10);
         intList.Remove(10);
 
