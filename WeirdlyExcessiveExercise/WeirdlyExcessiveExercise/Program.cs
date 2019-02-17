@@ -124,6 +124,7 @@ namespace WeirdlyExcessiveExercise
                 {
                     Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
                     guess = Console.ReadLine();
+                    index = items.IndexOf(guess);
                 }
                 else
                 {
