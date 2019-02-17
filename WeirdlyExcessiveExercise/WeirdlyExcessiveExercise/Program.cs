@@ -89,22 +89,48 @@ namespace WeirdlyExcessiveExercise
 
             //5. like the same thing as 4 but with <=
 
-            Console.WriteLine("Write a number greater than or equal to 7");
-            int number = Convert.ToInt16(Console.ReadLine());
+            //Console.WriteLine("Write a number greater than or equal to 7");
+            //int number = Convert.ToInt16(Console.ReadLine());
 
-            while (number <= 6)
+            //while (number <= 6)
+            //{
+            //    switch (number)
+            //    {
+            //        default:
+            //            Console.WriteLine("I mean im not saying that " + number + " isn't a great number, it's just not greater than or equal to 7...");
+            //            Console.WriteLine("Write a number greater than or equal to 7");
+            //            number = Convert.ToInt16(Console.ReadLine());
+            //            break;
+            //    }
+            //}
+            //Console.WriteLine("Cool");
+            //Console.ReadLine();
+
+            //6. create a list of strings where each string is unique. ask user to select text to search for in the list
+            //   create a loop that iterates through the list then displays the indecies that contain the matching text
+
+            List<string> items = new List<string>() { "sunscreen", "drinking water", "a towel", "mask and snorkel", "snacks", "shoes", "an umbrella", "s'mores supplies", "ants", "candles" };
+
+            Console.WriteLine("I made a list of 10 things I could bring with me to the beach, with 1 being the most important item and 10 being the least.");
+            Console.ReadLine();
+            Console.WriteLine("Some of the items on my list are: shoes, ants, a towel, s'mores supplies, sunscreen, and snacks");
+            Console.WriteLine("Out of those items, which do you think is most important on my list?");
+            string guess = Console.ReadLine();
+            int index = items.IndexOf(guess);
+
+            foreach (string item in items)
             {
-                switch (number)
+                if (guess != "sunscreen")
                 {
-                    default:
-                        Console.WriteLine("I mean im not saying that " + number + " isn't a great number, it's just not greater than or equal to 7...");
-                        Console.WriteLine("Write a number greater than or equal to 7");
-                        number = Convert.ToInt16(Console.ReadLine());
-                        break;
+                    Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
+                    guess = Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Yes! the sun is the most important enemy!");
                 }
             }
-            Console.WriteLine("Cool");
-            Console.ReadLine();
+            Console.Read();
         }
     }
 }
