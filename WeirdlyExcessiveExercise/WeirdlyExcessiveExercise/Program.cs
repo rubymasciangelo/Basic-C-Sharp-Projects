@@ -70,16 +70,35 @@ namespace WeirdlyExcessiveExercise
 
             //4. Create a loop where the comparison used to determine whether to continue iterating is "<"
 
-            Console.WriteLine("Write a number greater than 7");
+            //Console.WriteLine("Write a number greater than 7");
+            //int number = Convert.ToInt16(Console.ReadLine());
+
+            //while (number < 7)
+            //{
+            //    switch (number)
+            //    {
+            //        default:
+            //            Console.WriteLine("I mean im not saying that " + number + " isn't a great number, it's just not greater than 7...");
+            //            Console.WriteLine("Write a number greater than 7");
+            //            number = Convert.ToInt16(Console.ReadLine());
+            //            break;
+            //    }
+            //}
+            //Console.WriteLine("Cool");
+            //Console.ReadLine();
+
+            //5. like the same thing as 4 but with <=
+
+            Console.WriteLine("Write a number greater than or equal to 7");
             int number = Convert.ToInt16(Console.ReadLine());
 
-            while (number < 7)
+            while (number <= 6)
             {
                 switch (number)
                 {
                     default:
-                        Console.WriteLine("I mean im not saying that " + number + " isn't a great number, it's just not greater than 7...");
-                        Console.WriteLine("Write a number greater than 7");
+                        Console.WriteLine("I mean im not saying that " + number + " isn't a great number, it's just not greater than or equal to 7...");
+                        Console.WriteLine("Write a number greater than or equal to 7");
                         number = Convert.ToInt16(Console.ReadLine());
                         break;
                 }
