@@ -15,7 +15,7 @@ namespace WitnessProtectionProgram
             int newName = Convert.ToInt16(Console.ReadLine());
 
             if (newName > 5)
-            {
+            
                 do
                 {
                     switch (newName)
@@ -28,11 +28,11 @@ namespace WitnessProtectionProgram
                     }
                 }
                 while (newName > 5);
-            }
+            
 
             else
             {
-                Console.WriteLine("Your new name is names[newname]");
+                Console.WriteLine("Your new name is " + names[newName]);
             }
 
             Console.Read();
