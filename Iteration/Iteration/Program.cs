@@ -19,6 +19,19 @@ namespace Iteration
             }
 
             Console.ReadLine();
+
+            string[] names = { "Jesse", "Erik", "Daniel", "Adam" };
+
+            for (int j = 0; j < names.Length; j++)
+            {
+                if (names[j] == "Jesse")
+                {
+                    Console.WriteLine(names[j]);
+                }
+            }
+
+            Console.ReadLine();
+
         }
     }
 }
