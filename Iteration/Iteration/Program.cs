@@ -30,6 +30,25 @@ namespace Iteration
 
             Console.ReadLine();
 
+            List<int> testScores1 = new List<int>();
+            testScores1.Add(98);
+            testScores1.Add(99);
+            testScores1.Add(81);
+            testScores1.Add(72);
+            testScores1.Add(70);
+
+            foreach (int score in testScores1)
+            {
+                if(score > 85)
+                {
+                    Console.WriteLine("Passing test score: " + score);
+                }
+
+                Console.ReadLine();
+
+           
+            }
+
         }
     }
 }
