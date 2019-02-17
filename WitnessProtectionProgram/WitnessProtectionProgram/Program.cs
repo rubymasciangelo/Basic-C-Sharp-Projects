@@ -13,10 +13,8 @@ namespace WitnessProtectionProgram
             Console.WriteLine("Welcome to the Witness Protection Program! Time to generate a new identity!");
             Console.WriteLine("Pick a number between 0 and 5:");
             int newName = Convert.ToInt16(Console.ReadLine());
-
-            if (newName > 5)
             
-                do
+                while (newName > 5)
                 {
                     switch (newName)
                     {
@@ -27,14 +25,8 @@ namespace WitnessProtectionProgram
                             break;
                     }
                 }
-                while (newName > 5);
-            
 
-            else
-            {
-                Console.WriteLine("Your new name is " + names[newName]);
-            }
-
+            Console.WriteLine("Your new name is " + names[newName]);
             Console.Read();
                // int[] newAge = { 26, 37, 79, 6, 43, 15, 64 };
         }
