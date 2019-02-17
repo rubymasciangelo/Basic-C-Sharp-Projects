@@ -63,13 +63,14 @@ namespace WeirdlyExcessiveExercise
                         insult = Console.ReadLine();
                         break;
 
-                    case "Cats don't like you":
-                        Console.WriteLine("How Dare You");
-                        Console.ReadLine();
-                        break;
+                    //case "Cats don't like you":
+                    //    Console.WriteLine("How Dare You");
+                    //    Console.ReadLine();
+                    //    break;
                 }
 
             }
+            Console.WriteLine("How Dare You");
             Console.ReadLine();
         }
     }
