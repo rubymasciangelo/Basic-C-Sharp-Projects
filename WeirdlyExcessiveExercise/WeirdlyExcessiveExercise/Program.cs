@@ -146,21 +146,22 @@ namespace WeirdlyExcessiveExercise
 
             foreach (string item in items)
             {
-                if (guess != item)
-                {
-                    Console.WriteLine("That wasn't even on my list! Try again!");
-                    guess = Console.ReadLine();
-                    index = items.IndexOf(guess);
-                }
-                else if (guess != "sunscreen")
+                
+                if (guess != "sunscreen" && guess == item)
                 {
                     Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
                     guess = Console.ReadLine();
                     index = items.IndexOf(guess);
                 }
-                else
+                else if (guess == "sunscreen")
                 {
                     Console.WriteLine("Yes! the sun is the most important enemy!");
+                }
+                else
+                {
+                    Console.WriteLine("That wasn't even on my list! Try again!");
+                    guess = Console.ReadLine();
+                    index = items.IndexOf(guess);
                 }
             }
             Console.Read();
