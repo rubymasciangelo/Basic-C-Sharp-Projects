@@ -28,6 +28,15 @@ namespace CountryRoad
 
 
             Console.WriteLine(bigSong);
+            Console.ReadLine();
+
+            string country = "\nCountry road";
+            string home = "\ntake me home";
+            string west = "\nWest Virginia, Mountain Mama";
+
+            Console.WriteLine(country + home + "\nto the place \nI belong" + west + "," + home + country);
+            west = west.ToUpper();
+            Console.WriteLine(country + home + "\nto the place \nI belong" + west + "!" + home + country);
             Console.Read();
         }
     }
