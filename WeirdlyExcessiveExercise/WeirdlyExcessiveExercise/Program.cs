@@ -147,7 +147,7 @@ namespace WeirdlyExcessiveExercise
             foreach (string item in items)
             {
                 
-                if (guess != "sunscreen" && guess == item)
+                if (guess != "sunscreen" && guess == items[index])
                 {
                     Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
                     guess = Console.ReadLine();
