@@ -28,6 +28,8 @@ using System.Collections.Generic;
         intList.Remove(10);
 
         Console.WriteLine(intList[0]);
+
+        
    
         }
     }
