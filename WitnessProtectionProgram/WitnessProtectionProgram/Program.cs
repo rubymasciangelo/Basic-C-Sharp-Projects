@@ -27,8 +27,27 @@ namespace WitnessProtectionProgram
                 }
 
             Console.WriteLine("Your new name is " + names[newName]);
-            Console.Read();
-               // int[] newAge = { 26, 37, 79, 6, 43, 15, 64 };
+            Console.ReadLine();
+
+               int[] ages = { 26, 37, 79, 6, 43, 15, 64 };
+
+            Console.WriteLine("Pick a number between 0 and 6:");
+            int newAge = Convert.ToInt16(Console.ReadLine());
+
+            while (newAge > 6)
+            {
+                switch (newAge)
+                {
+                    default:
+                        Console.WriteLine("Whoa there, let's keep it between 0 and 6.");
+                        Console.WriteLine("Try again:");
+                        newAge = Convert.ToInt16(Console.ReadLine());
+                        break;
+                }
+            }
+
+            Console.WriteLine("Your new age is " + ages[newAge] + " years old.");
+            Console.ReadLine();
         }
     }
 }
