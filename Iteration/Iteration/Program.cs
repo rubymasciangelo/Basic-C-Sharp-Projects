@@ -53,6 +53,18 @@ namespace Iteration
                     
                 }
 
+                List<int> testScores2 = new List<int>() { 98, 99, 12, 74, 23, 99 };
+                List<int> passingScores = new List<int>();
+
+                foreach (int score2 in testScores2)
+                {
+                    if (score2 > 85)
+                    {
+                        passingScores.Add(score2);
+                    }
+                }
+
+                Console.WriteLine(passingScores.Count); //array haslength list has count
                 Console.ReadLine();
 
            
