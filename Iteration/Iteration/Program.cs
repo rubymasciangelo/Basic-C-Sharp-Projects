@@ -48,10 +48,9 @@ namespace Iteration
 
                 foreach (string name1 in names1)
                 {
-                    if (name1 == "Jesse")
-                    {
+                    
                         Console.WriteLine(name1);
-                    }
+                    
                 }
 
                 Console.ReadLine();
