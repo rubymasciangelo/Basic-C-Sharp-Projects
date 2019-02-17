@@ -32,10 +32,28 @@ namespace WeirdlyExcessiveExercise
 
             //2. Create an infinite loop
 
+            //Console.WriteLine("Insult me:");
+            //string insult = Console.ReadLine();
+
+            //while (true)
+            //{
+            //    switch (insult)
+            //    {
+            //        default:
+            //            Console.WriteLine("I'm rubber, you're glue! Whatever you say bounces off me and sticks to you!");
+            //            Console.WriteLine("Insult me:");
+            //            insult = Console.ReadLine();
+            //            break;
+            //    }
+                
+            //}
+
+            //3. Fix the infinite loop so it will execute
+
             Console.WriteLine("Insult me:");
             string insult = Console.ReadLine();
 
-            while (true)
+            while (insult != "Cats don't like you")
             {
                 switch (insult)
                 {
@@ -44,9 +62,15 @@ namespace WeirdlyExcessiveExercise
                         Console.WriteLine("Insult me:");
                         insult = Console.ReadLine();
                         break;
+
+                    case "Cats don't like you":
+                        Console.WriteLine("How Dare You");
+                        Console.ReadLine();
+                        break;
                 }
-                //Console.ReadLine();
+
             }
+            Console.ReadLine();
         }
     }
 }
