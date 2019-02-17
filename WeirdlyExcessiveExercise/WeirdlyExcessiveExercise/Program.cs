@@ -45,32 +45,46 @@ namespace WeirdlyExcessiveExercise
             //            insult = Console.ReadLine();
             //            break;
             //    }
-                
+
             //}
 
             //3. Fix the infinite loop so it will execute
 
-            Console.WriteLine("Insult me:");
-            string insult = Console.ReadLine();
+            //Console.WriteLine("Insult me:");
+            //string insult = Console.ReadLine();
 
-            while (insult != "Cats don't like you")
+            //while (insult != "Cats don't like you")
+            //{
+            //    switch (insult)
+            //    {
+            //        default:
+            //            Console.WriteLine("I'm rubber, you're glue! Whatever you say bounces off me and sticks to you!");
+            //            Console.WriteLine("Insult me:");
+            //            insult = Console.ReadLine();
+            //            break;
+            //    }
+
+            //}
+            //Console.WriteLine("How Dare You");
+            //Console.ReadLine();
+
+            //4. Create a loop where the comparison used to determine whether to continue iterating is "<"
+
+            Console.WriteLine("Write a number greater than 7");
+            int number = Convert.ToInt16(Console.ReadLine());
+
+            while (number < 7)
             {
-                switch (insult)
+                switch (number)
                 {
                     default:
-                        Console.WriteLine("I'm rubber, you're glue! Whatever you say bounces off me and sticks to you!");
-                        Console.WriteLine("Insult me:");
-                        insult = Console.ReadLine();
+                        Console.WriteLine("I mean im not saying that " + number + " isn't a great number, it's just not greater than 7...");
+                        Console.WriteLine("Write a number greater than 7");
+                        number = Convert.ToInt16(Console.ReadLine());
                         break;
-
-                    //case "Cats don't like you":
-                    //    Console.WriteLine("How Dare You");
-                    //    Console.ReadLine();
-                    //    break;
                 }
-
             }
-            Console.WriteLine("How Dare You");
+            Console.WriteLine("Cool");
             Console.ReadLine();
         }
     }
