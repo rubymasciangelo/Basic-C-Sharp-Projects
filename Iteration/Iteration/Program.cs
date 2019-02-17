@@ -24,10 +24,8 @@ namespace Iteration
 
             for (int j = 0; j < names.Length; j++)
             {
-                if (names[j] == "Jesse")
-                {
+                
                     Console.WriteLine(names[j]);
-                }
             }
 
             Console.ReadLine();
