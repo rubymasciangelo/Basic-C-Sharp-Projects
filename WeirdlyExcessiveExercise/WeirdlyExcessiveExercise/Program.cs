@@ -150,15 +150,18 @@ namespace WeirdlyExcessiveExercise
                     guess = Console.ReadLine();
                     index = items.IndexOf(guess);
                 }
-                else if (guess[index] < 0)
-                {
-                    Console.WriteLine("What? That's not even on my list! Try again!");
-                    guess = Console.ReadLine();
-                    index = items.IndexOf(guess);
-                }
                 else
                 {
-                    Console.WriteLine("Yes! the sun is the most important enemy!");
+                    if (guess[index] < 0)
+                    {
+                        Console.WriteLine("What? That's not even on my list! Try again!");
+                        guess = Console.ReadLine();
+                        index = items.IndexOf(guess);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Yes! the sun is the most important enemy!");
+                    }
                 }
             }
             Console.Read();
