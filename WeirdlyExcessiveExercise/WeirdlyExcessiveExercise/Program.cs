@@ -144,7 +144,7 @@ namespace WeirdlyExcessiveExercise
 
             foreach (string item in items)
             {
-                if (guess != "sunscreen")
+                if (guess[index] < 1)
                 {
                     Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
                     guess = Console.ReadLine();
@@ -152,7 +152,7 @@ namespace WeirdlyExcessiveExercise
                 }
                 else
                 {
-                    if (items.IndexOf(guess) == -1)
+                    if (guess[index] == -1)
                     {
                         Console.WriteLine("What? That's not even on my list! Try again!");
                         guess = Console.ReadLine();
