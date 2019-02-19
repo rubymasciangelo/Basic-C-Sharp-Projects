@@ -152,7 +152,7 @@ namespace WeirdlyExcessiveExercise
                 }
                 else
                 {
-                    if (guess[index] < 0)
+                    if (guess[index] == -1)
                     {
                         Console.WriteLine("What? That's not even on my list! Try again!");
                         guess = Console.ReadLine();
