@@ -144,7 +144,7 @@ namespace WeirdlyExcessiveExercise
 
             foreach (string item in items)
             {
-                if (guess[index] < 1)
+                if (index >= 1)
                 {
                     Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
                     guess = Console.ReadLine();
@@ -152,15 +152,15 @@ namespace WeirdlyExcessiveExercise
                 }
                 else
                 {
-                    if (guess[index] == -1)
+                    if (index == 0)
+                    {
+                        Console.WriteLine("Yes! the sun is the most important enemy!");
+                    }
+                    else
                     {
                         Console.WriteLine("What? That's not even on my list! Try again!");
                         guess = Console.ReadLine();
                         index = items.IndexOf(guess);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Yes! the sun is the most important enemy!");
                     }
                 }
             }
