@@ -28,6 +28,10 @@ using System.Threading.Tasks;
         {
             Console.WriteLine("Please don't divide by zero");
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
         Console.ReadLine();
 
         }
