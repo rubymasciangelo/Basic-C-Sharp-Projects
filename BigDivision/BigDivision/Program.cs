@@ -10,16 +10,32 @@ namespace BigDivision
     {
         static void Main(string[] args)
         {
-            List<int> numbers = new List<int>() { 4, 8, 15, 16, 23, 32 };
-            Console.WriteLine("Choose a number to divide a list of numbers by:");
-            int numChoice = Convert.ToInt16(Console.ReadLine());
-            foreach (int number in numbers)
+            try
             {
-                int numAnswer = number / numChoice;
-                Console.WriteLine(number + " divided by " + numChoice + " = " + numAnswer);
+                List<int> numbers = new List<int>() { 4, 8, 15, 16, 23, 32 };
+                Console.WriteLine("Choose a number to divide a list of numbers by:");
+                int numChoice = Convert.ToInt16(Console.ReadLine());
+                foreach (int number in numbers)
+                {
+                    int numAnswer = number / numChoice;
+                    Console.WriteLine(number + " divided by " + numChoice + " = " + numAnswer);
+                }
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine(ex.Message);
+                int numChoice = Convert.ToInt16(Console.ReadLine());
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+                int numChoice = Convert.ToInt16(Console.ReadLine());
+            }
+            finally
+            {
+                Console.WriteLine("ThE pRoGrAm HaS EmErGeD fRoM tHe TrY cAtCh BlOcK");
             }
             Console.ReadLine();
-
         }
     }
 }
