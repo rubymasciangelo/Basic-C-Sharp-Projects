@@ -23,9 +23,12 @@ using System.Threading.Tasks;
         catch (FormatException ex)
         {
             Console.WriteLine(ex.Message);
-            Console.ReadLine();
         }
-         
-            
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine("Please don't divide by zero");
+        }
+        Console.ReadLine();
+
+        }
             }
-        }
