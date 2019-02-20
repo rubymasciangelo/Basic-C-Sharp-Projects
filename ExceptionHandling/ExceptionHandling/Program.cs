@@ -32,7 +32,11 @@ using System.Threading.Tasks;
         {
             Console.WriteLine(ex.Message);
         }
-        Console.ReadLine();
+        finally
+        {
+            Console.ReadLine();
+        }
+        
 
         }
             }
