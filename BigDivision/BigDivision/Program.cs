@@ -26,6 +26,7 @@ namespace BigDivision
                 {
                     Console.WriteLine(ex.Message);
                     
+                    
                 }
                 catch (DivideByZeroException ex)
                 {
@@ -35,6 +36,7 @@ namespace BigDivision
                 finally
                 {
                     Console.WriteLine("ThE pRoGrAm HaS EmErGeD fRoM tHe TrY cAtCh BlOcK");
+                    
                 }
             }
             Console.ReadLine();
