@@ -13,12 +13,14 @@ namespace BlackJack
             Deck deck = new Deck();
             deck.Cards = new List<Card>();
 
-            //Card cardOne = new Card();
-            ////cardOne.Face = "Queen";
-            ////cardOne.Suit = "Spades";
+            Card cardOne = new Card();
+            cardOne.Face = "Queen";
+            cardOne.Suit = "Spades";
+
+            deck.Cards.Add(cardOne);
 
             //Console.WriteLine(cardOne.Face + " of " + cardOne.Suit);
-                Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
