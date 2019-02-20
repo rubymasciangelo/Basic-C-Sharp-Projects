@@ -10,11 +10,14 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
-            Card cardOne = new Card();
-            //cardOne.Face = "Queen";
-            //cardOne.Suit = "Spades";
+            Deck deck = new Deck();
+            deck.Cards = new List<Card>();
 
-            Console.WriteLine(cardOne.Face + " of " + cardOne.Suit);
+            //Card cardOne = new Card();
+            ////cardOne.Face = "Queen";
+            ////cardOne.Suit = "Spades";
+
+            //Console.WriteLine(cardOne.Face + " of " + cardOne.Suit);
                 Console.ReadLine();
         }
     }
