@@ -12,7 +12,7 @@ namespace MathClassApp
         {
             Console.WriteLine("Choose an integer to do some math to:");
             Int16 inputNum = Convert.ToInt16(Console.ReadLine());
-            int input1 = Math.Multiply(inputNum);
+            int input1 = Math.Mult3(inputNum);
             Console.WriteLine(inputNum + " multiplied by 3 is " + input1 );
             int input2 = Math.Add3(input1);
             Console.WriteLine(input1 + " plus 3 is " + input2 );
