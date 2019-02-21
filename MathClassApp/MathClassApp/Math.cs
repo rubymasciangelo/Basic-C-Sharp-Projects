@@ -14,6 +14,10 @@ namespace MathClassApp
             return times3;
         }
 
-        public static int Add3(int )
+        public static int Add3(int input1)
+        {
+            int plus3 = input1 + 3;
+            return plus3;
+        }
     }
 }
