@@ -16,6 +16,9 @@ namespace MathClassApp
             Console.WriteLine(inputNum + " multiplied by 3 is " + input1 );
             int input2 = Math.Add3(input1);
             Console.WriteLine(input1 + " plus 3 is " + input2 );
+            int newNum = Math.Divide3(input2);
+            Console.WriteLine(input2 + " divided by 3 is " + newNum);
+            Console.WriteLine("Your new number is: " + newNum);
 
 
             Console.ReadLine();
