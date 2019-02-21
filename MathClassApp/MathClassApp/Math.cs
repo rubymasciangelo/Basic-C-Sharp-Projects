@@ -13,5 +13,7 @@ namespace MathClassApp
             int times3 = inputNum * 3;
             return times3;
         }
+
+        public static int Add3(int )
     }
 }
