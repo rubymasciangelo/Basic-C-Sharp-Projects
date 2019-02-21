@@ -8,7 +8,7 @@ namespace MathClassApp
 {
     public class Math
     {
-        public static int Mult3(int inputNum)
+        public static int Multiply3(int inputNum)
         {
             int times3 = inputNum * 3;
             return times3;
@@ -20,6 +20,10 @@ namespace MathClassApp
             return plus3;
         }
 
-        public static int 
+        public static int Divide3(int input2)
+        {
+            int div3 = input2 / 3;
+            return div3;
+        }
     }
 }
