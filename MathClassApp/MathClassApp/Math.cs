@@ -11,7 +11,7 @@ namespace MathClassApp
         public int Multiply(int inputNum)
         {
             int times3 = inputNum * 3;
-            Console.WriteLine(inputNum + " multiplied by 3 is " + times3 );
+            return times3;
         }
     }
 }
