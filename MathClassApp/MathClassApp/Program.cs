@@ -11,7 +11,11 @@ namespace MathClassApp
         static void Main(string[] args)
         {
             Console.WriteLine("Choose an integer to do some math to:");
-            Int16 inputNum = Convert.ToInt16("Console.Readline");
+            Int16 inputNum = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine(inputNum + " multiplied by 3 is " + Math.Multiply(inputNum));
+
+
+            Console.ReadLine();
         }
     }
 }

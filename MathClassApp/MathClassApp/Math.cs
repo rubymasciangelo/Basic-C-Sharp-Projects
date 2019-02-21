@@ -8,7 +8,7 @@ namespace MathClassApp
 {
     public class Math
     {
-        public int Multiply(int inputNum)
+        public static int Multiply(int inputNum)
         {
             int times3 = inputNum * 3;
             return times3;
