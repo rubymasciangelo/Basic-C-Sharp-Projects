@@ -14,6 +14,8 @@ namespace MathClassApp
             Int16 inputNum = Convert.ToInt16(Console.ReadLine());
             int input1 = Math.Multiply(inputNum);
             Console.WriteLine(inputNum + " multiplied by 3 is " + input1 );
+            int input2 = Math.Add3(input1);
+            Console.WriteLine(input1 + " plus 3 is " + input2 );
 
 
             Console.ReadLine();
