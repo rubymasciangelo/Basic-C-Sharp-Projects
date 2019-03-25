@@ -10,6 +10,11 @@ namespace LemonDifficult
     {
         static void Main(string[] args)
         {
+            int inputNum = 2;
+            int decoyNum = 7;
+
+            BaitSwitch.WaitWhat(inputNum, decoyNum);
+            Console.ReadLine();
         }
     }
 }
