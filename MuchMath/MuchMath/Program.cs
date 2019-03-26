@@ -11,9 +11,9 @@ namespace MuchMath
         static void Main(string[] args)
         {
             Console.WriteLine("Please input an integer: ");
-            int input1 = Convert.ToInt16(Console.ReadLine());
+            string input1 = Console.ReadLine();
             Console.WriteLine("You totally don't have to but you may add a second number: ");
-            int input2 = Convert.ToInt16(Console.ReadLine());
+            string input2 = Console.ReadLine();
             Console.WriteLine(Okurrr.SomeMath(input1, input2));
             Console.ReadKey();
         }
