@@ -18,6 +18,11 @@ namespace MathAgain
             Double plus4 = decimalX + 4;
             return Convert.ToInt16(plus4);
         }
+        public static int DoMath(string stringX)
+        {
+            int plus8 = Convert.ToInt16(stringX) + 8;
+            return plus8;
+        }
 
     }
 }
