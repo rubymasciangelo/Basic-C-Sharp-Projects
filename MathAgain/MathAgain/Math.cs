@@ -13,6 +13,11 @@ namespace MathAgain
             int plus2 = inputX + 2;
             return plus2;
         }
+        public static int DoMath(Decimal decimalX)
+        {
+            decimal plus4 = decimalX + 4;
+            return Convert.ToInt16(plus4);
+        }
 
     }
 }
