@@ -8,13 +8,17 @@ namespace MuchMath
 {
     public class Okurrr
     {
-        public static int SomeMath(string input1)
+        public void SomeMath(string input1, string input2)
         {
-            return Convert.ToInt16(input1) + 3;
+            int dub =  Convert.ToInt16(input1) + Convert.ToInt16(input2) + 3;
+            Console.WriteLine(dub);
+            //return dub;
         }
-        public static int SomeMath(string input1, string input2)
+        public void SomeMath(string input1)
         {
-            return Convert.ToInt16(input1) + Convert.ToInt16(input2) + 3;
+            int single = Convert.ToInt16(input1) + 3;
+            Console.WriteLine(single);
+            //return single;
         }
     }
 }
