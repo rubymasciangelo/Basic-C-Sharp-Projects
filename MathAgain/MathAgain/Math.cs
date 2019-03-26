@@ -13,5 +13,6 @@ namespace MathAgain
             int plus2 = inputX + 2;
             return plus2;
         }
+
     }
 }
