@@ -10,7 +10,7 @@ namespace MathAgain
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Math.Add2(inputX:12));
+            Console.WriteLine(Math.DoMath(inputX:12));
             Console.ReadKey();
         }
     }
