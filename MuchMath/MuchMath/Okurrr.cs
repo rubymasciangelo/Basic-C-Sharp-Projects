@@ -8,7 +8,7 @@ namespace MuchMath
 {
     public class Okurrr
     {
-        public static int SomeMath(string input1, string input2 = null)
+        public static int SomeMath(string input1, string input2 = "0")
         {
             return Convert.ToInt16(input1) + Convert.ToInt16(input2) + 3;
         }
