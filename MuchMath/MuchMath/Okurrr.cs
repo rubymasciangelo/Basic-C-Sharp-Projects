@@ -8,10 +8,13 @@ namespace MuchMath
 {
     public class Okurrr
     {
+        public static int SomeMath(int input1)
+        {
+            return input1 + 3;
+        }
         public static int SomeMath(int input1, int input2 = 0)
         {
-            int plus3 = input1 + input2 + 3;
-            return plus3;
+            return input1 + input2 + 3;
         }
     }
 }
