@@ -209,29 +209,28 @@ namespace WeirdlyExcessiveExercise
             Console.WriteLine("Some of the items on my list are: shoes, ants, a towel, s'mores supplies, sunscreen, and snacks");
             Console.WriteLine("Out of those items, which do you think is most important on my list?");
             string guess = Console.ReadLine();
-            int index = items.IndexOf(guess);
-            int index2 = items.LastIndexOf(guess);
 
             foreach (string item in items)
             {
-                if (guess != "sunscreen")
+                if (items.Contains(guess) == false)
                 {
-                    Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
+                    Console.WriteLine("What? That's not even on my list! Try again!");
                     guess = Console.ReadLine();
-                    index = items.IndexOf(guess);
+                   
                 }
                 else
                 {
-                    if (index == 0)
+                    if (guess == "sunscreen")
                     {
-                        Console.WriteLine("Yes! the sun is the most important enemy!\nThat's why sunscreen is numbers " + index + " and " + index2 + " on my list!");
+                        int index2 = items.LastIndexOf(guess);
+                        Console.WriteLine("Yes! the sun is the most important enemy!\nThat's why sunscreen is numbers " + items.IndexOf(guess) +" and " + index2 + " on my list!");
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("What? That's not even on my list! Try again!");
+                        int index = items.IndexOf(guess);
+                        Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
                         guess = Console.ReadLine();
-                        index = items.IndexOf(guess);
                     }
                 }
             }
