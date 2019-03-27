@@ -13,7 +13,7 @@ namespace BigDivision
             
                 List<int> numbers = new List<int>() { 4, 8, 15, 16, 23, 32 };
                 Console.WriteLine("Choose a number to divide a list of numbers by:");
-                int numChoice = Convert.ToInt16(Console.ReadLine());
+                string numChoice = Console.ReadLine();
                 
                
             try
@@ -21,7 +21,7 @@ namespace BigDivision
                 foreach (int number in numbers)
                 {
                     
-                    int numAnswer = number / numChoice;
+                    int numAnswer = number / Convert.ToInt16(numChoice);
                     Console.WriteLine(number + " divided by " + numChoice + " = " + numAnswer);
                     
                 }
