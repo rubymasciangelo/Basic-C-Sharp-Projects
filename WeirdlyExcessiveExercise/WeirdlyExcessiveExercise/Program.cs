@@ -109,32 +109,6 @@ namespace WeirdlyExcessiveExercise
             //6. create a list of strings where each string is unique. ask user to select text to search for in the list
             //   create a loop that iterates through the list then displays the indecies that contain the matching text
 
-            List<string> items = new List<string>() { "sunscreen", "drinking water", "a towel", "mask and snorkel", "snacks", "shoes", "an umbrella", "s'mores supplies", "ants", "candles" };
-
-            Console.WriteLine("I made a list of 10 things I could bring with me to the beach, with 1 being the most important\nitem and 10 being the least.");
-            Console.WriteLine("Some of the items on my list are: shoes, ants, a towel, s'mores supplies, sunscreen, and snacks");
-            Console.WriteLine("Out of those items, which do you think is most important on my list?");
-            string guess = Console.ReadLine();
-            int index = items.IndexOf(guess);
-
-            foreach (string item in items)
-            {
-                if (guess != "sunscreen")
-                {
-                    Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
-                    guess = Console.ReadLine();
-                    index = items.IndexOf(guess);
-                }
-                else
-                {
-                    Console.WriteLine("Yes! the sun is the most important enemy!");
-                    break;
-                }
-            }
-            Console.Read();
-
-            //7. add code to the above loop that tells user if they put in text that wasnt on the list
-
             //List<string> items = new List<string>() { "sunscreen", "drinking water", "a towel", "mask and snorkel", "snacks", "shoes", "an umbrella", "s'mores supplies", "ants", "candles" };
 
             //Console.WriteLine("I made a list of 10 things I could bring with me to the beach, with 1 being the most important\nitem and 10 being the least.");
@@ -145,7 +119,7 @@ namespace WeirdlyExcessiveExercise
 
             //foreach (string item in items)
             //{
-            //    if (index >= 1)
+            //    if (guess != "sunscreen")
             //    {
             //        Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
             //        guess = Console.ReadLine();
@@ -153,19 +127,46 @@ namespace WeirdlyExcessiveExercise
             //    }
             //    else
             //    {
-            //        if (index == 0)
-            //        {
-            //            Console.WriteLine("Yes! the sun is the most important enemy!");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("What? That's not even on my list! Try again!");
-            //            guess = Console.ReadLine();
-            //            index = items.IndexOf(guess);
-            //        }
+            //        Console.WriteLine("Yes! the sun is the most important enemy!");
+            //        break;
             //    }
             //}
             //Console.Read();
+
+            //7. add code to the above loop that tells user if they put in text that wasnt on the list
+
+            List<string> items = new List<string>() { "sunscreen", "drinking water", "a towel", "mask and snorkel", "snacks", "shoes", "an umbrella", "s'mores supplies", "ants", "candles" };
+
+            Console.WriteLine("I made a list of 10 things I could bring with me to the beach, with 1 being the most important\nitem and 10 being the least.");
+            Console.WriteLine("Some of the items on my list are: shoes, ants, a towel, s'mores supplies, sunscreen, and snacks");
+            Console.WriteLine("Out of those items, which do you think is most important on my list?");
+            string guess = Console.ReadLine();
+            int index = items.IndexOf(guess);
+
+            foreach (string item in items)
+            {
+                if (index >= 1)
+                {
+                    Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
+                    guess = Console.ReadLine();
+                    index = items.IndexOf(guess);
+                }
+                else
+                {
+                    if (index == 0)
+                    {
+                        Console.WriteLine("Yes! the sun is the most important enemy!");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("What? That's not even on my list! Try again!");
+                        guess = Console.ReadLine();
+                        index = items.IndexOf(guess);
+                    }
+                }
+            }
+            Console.Read();
 
             //8.  Add code to that above loop that stops it from executing once a match has been found
 
