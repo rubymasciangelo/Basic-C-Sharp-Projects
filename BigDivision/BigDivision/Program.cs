@@ -16,13 +16,14 @@ namespace BigDivision
 
                 Console.ReadLine();
 
-            foreach (int number in numbers)
-            {
                 try
+                {
+                foreach (int number in numbers)
                 {
                     int numChoice = Convert.ToInt16(Console.ReadLine());
                     int numAnswer = number / numChoice;
                     Console.WriteLine(number + " divided by " + numChoice + " = " + numAnswer);
+                }
                 }
                 catch (FormatException ex)
                 {
@@ -40,7 +41,6 @@ namespace BigDivision
                     Console.WriteLine("ThE pRoGrAm HaS EmErGeD fRoM tHe TrY cAtCh BlOcK");
                     
                 }
-            }
             
         }
     }
