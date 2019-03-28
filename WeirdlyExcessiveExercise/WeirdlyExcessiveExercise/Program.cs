@@ -203,56 +203,55 @@ namespace WeirdlyExcessiveExercise
 
             //10. add code to the list that tells a user if they input text not from the list.
 
-            List<string> items = new List<string>() { "sunscreen", "sunscreen", "a towel", "mask and snorkel", "snacks", "shoes", "an umbrella", "s'mores supplies", "ants", "candles" };
+            //List<string> items = new List<string>() { "sunscreen", "sunscreen", "a towel", "mask and snorkel", "snacks", "shoes", "an umbrella", "s'mores supplies", "ants", "candles" };
 
-            Console.WriteLine("I made a list of 10 things I could bring with me to the beach, with 1 being the most important\nitem and 10 being the least.");
-            Console.WriteLine("Some of the items on my list are: shoes, ants, a towel, s'mores supplies, sunscreen, and snacks");
-            Console.WriteLine("Out of those items, which do you think is most important on my list?");
-            string guess = Console.ReadLine();
+            //Console.WriteLine("I made a list of 10 things I could bring with me to the beach, with 1 being the most important\nitem and 10 being the least.");
+            //Console.WriteLine("Some of the items on my list are: shoes, ants, a towel, s'mores supplies, sunscreen, and snacks");
+            //Console.WriteLine("Out of those items, which do you think is most important on my list?");
+            //string guess = Console.ReadLine();
 
-            foreach (string item in items)
-            {
-                if (items.Contains(guess) == false)
-                {
-                    Console.WriteLine("What? That's not even on my list! Try again!");
-                    guess = Console.ReadLine();
-                   
-                }
-                else
-                {
-                    if (guess == "sunscreen")
-                    {
-                        int index2 = items.LastIndexOf(guess);
-                        Console.WriteLine("Yes! the sun is the most important enemy!\nThat's why sunscreen is numbers " + items.IndexOf(guess) +" and " + index2 + " on my list!");
-                        break;
-                    }
-                    else
-                    {
-                        int index = items.IndexOf(guess);
-                        Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
-                        guess = Console.ReadLine();
-                    }
-                }
-            }
-            Console.Read();
+            //foreach (string item in items)
+            //{
+            //    if (items.Contains(guess) == false)
+            //    {
+            //        Console.WriteLine("What? That's not even on my list! Try again!");
+            //        guess = Console.ReadLine();
+
+            //    }
+            //    else
+            //    {
+            //        if (guess == "sunscreen")
+            //        {
+            //            int index2 = items.LastIndexOf(guess);
+            //            Console.WriteLine("Yes! the sun is the most important enemy!\nThat's why sunscreen is numbers " + items.IndexOf(guess) +" and " + index2 + " on my list!");
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            int index = items.IndexOf(guess);
+            //            Console.WriteLine("Nope! Guess again! On my list, " + guess + " is number " + index);
+            //            guess = Console.ReadLine();
+            //        }
+            //    }
+            //}
+            //Console.Read();
 
             //11. Create a list of strings that has at least 2 identical strings in the list. create a 
             //    foreach loop that evaluates each item on the list and displays a message showing the
             //    string and whether or not it has already appeared on the list.
 
-            //List<string> items = new List<string>() { "fire alarm", "head phones", "pen", "ants", "toothpaste", "ants", "small hammer", "sunscreen" };
-            //foreach (string item in items)
-            //{
-            //    int index = items.IndexOf(item);
-            //    Console.WriteLine(item);
+            List<string> items = new List<string>() { "fire alarm", "head phones", "pen", "ants", "toothpaste", "ants", "small hammer", "sunscreen" };
+            foreach (string item in items)
+            { 
+                Console.WriteLine(item);
 
-            //    if (item[index] == items.LastIndexOf(item))
-            //    {
-            //        Console.WriteLine("This was already on the list!");
-            //    }
+                if (items.IndexOf(item) != items.LastIndexOf(item))
+                {
+                    Console.WriteLine("^^This is a duplicate!");
+                }
 
-            //    Console.Read();
-            //}
+                Console.Read();
+            }
         }
     }
 }
