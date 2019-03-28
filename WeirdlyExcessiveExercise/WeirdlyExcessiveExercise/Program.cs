@@ -245,13 +245,13 @@ namespace WeirdlyExcessiveExercise
             { 
                 Console.WriteLine(item);
 
-                if (items.IndexOf(item) != items.LastIndexOf(item))
+                if (items.IndexOf(item) != items.LastIndexOf(item)) //comparing the index of each item to every other item to identify duplicate strings
                 {
-                    Console.WriteLine("^^This is a duplicate!");
+                    Console.WriteLine("^^^^^^^This is a duplicate!");
                 }
 
-                Console.Read();
             }
+            Console.Read(); //moved out of foreach loop so it shows the whole list at once instead of 3 at a time for some reason
         }
     }
 }
