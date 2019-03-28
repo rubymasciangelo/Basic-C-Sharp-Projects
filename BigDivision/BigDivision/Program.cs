@@ -12,37 +12,46 @@ namespace BigDivision
         {
             
                 List<int> numbers = new List<int>() { 4, 8, 15, 16, 23, 32 };
+                
+
+
+
+            try
+            {
                 Console.WriteLine("Choose a number to divide a list of numbers by:");
                 string numChoice = Console.ReadLine();
-                
-               
-            try
+                int numChoice2 = Convert.ToInt16(numChoice);
+                if (numChoice2 == 0)
                 {
+                    throw new DivideByZeroException();
+                }
                 foreach (int number in numbers)
                 {
-                    
+
                     int numAnswer = number / Convert.ToInt16(numChoice);
                     Console.WriteLine(number + " divided by " + numChoice + " = " + numAnswer);
-                    
+
+
                 }
-                
             }
-                catch (FormatException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    
-                    
-                }
-                catch (DivideByZeroException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    
-                }
-                finally
-                {
-                    Console.WriteLine("ThE pRoGrAm HaS EmErGeD fRoM tHe TrY cAtCh BlOcK");
-                    
-                }
+
+
+            catch (FormatException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+            //finally
+            //{
+                //Console.WriteLine("ThE pRoGrAm HaS EmErGeD fRoM tHe TrY cAtCh BlOcK");
+
+            //}
             Console.ReadLine();
         }
     }
