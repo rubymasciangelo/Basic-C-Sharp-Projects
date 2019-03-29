@@ -20,6 +20,13 @@ namespace VeryMethod
             hmmm.confuse(out input1); //an out parameter that displays a message in response to input being entered
 
             Console.ReadKey();
+
+            Console.WriteLine("Are you happy? Yes or No: ");
+            string inputHappy = Console.ReadLine();
+            Console.WriteLine("Have you seen a bird today? If you have not, just hit enter. If you have, type yes and hit enter: ");
+            string inputBird = Console.ReadLine();
+
+
         }
 
         //example sort of
