@@ -14,7 +14,7 @@ namespace BlackJack
 
         public abstract void Play();
 
-        public void ListPlayer()
+        public virtual void ListPlayers()
         {
             foreach (string player in Players)
             {
