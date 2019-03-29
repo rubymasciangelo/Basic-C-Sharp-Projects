@@ -16,8 +16,10 @@ namespace VeryMethod
             BigStaticClass printResult = new BigStaticClass();
             printResult.HalfIt(input1);
 
-            BigStaticClass hmmm = new BigStaticClass();
-            hmmm.confuse(out input1); //an out parameter that displays a message in response to input being entered
+            //BigStaticClass hmmm = new BigStaticClass();
+            //hmmm.Confuse(out input1); //an out parameter that displays a message in response to input being entered
+
+            Console.WriteLine(BigStaticClass.Confuse(out input1));
 
             Console.ReadKey();
 
@@ -28,11 +30,11 @@ namespace VeryMethod
 
             if (inputSeenBird != "")
             {
-                BigStaticClass.overload(inputBird, inputSeenBird);
+                Console.WriteLine(BigStaticClass.Overload(inputBird, inputSeenBird));
             }
             else
             {
-                BigStaticClass.overload(inputBird);
+                Console.WriteLine(BigStaticClass.Overload(inputBird));
             }
             Console.ReadKey();
         }

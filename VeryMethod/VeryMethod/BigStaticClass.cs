@@ -13,19 +13,21 @@ namespace VeryMethod
             double result = Convert.ToDouble(input1) / 2;
             Console.WriteLine(result);
         }
-        public void confuse(out string notsure)
+        public static string Confuse(out string notsure)
         {
             notsure = "why tho";
-            Console.WriteLine(notsure);
+            return notsure;
         }
 
-        public static void overload(string inputBird)
-        {
-            Console.WriteLine("Ok great");
+        public static string Overload(string uabird)
+        { 
+            uabird = "Ok great";
+            return uabird;
         }
-        public static void overload(string inputBird, string inputSeenBird)
+        public static string Overload(string uabird, string useebird)
         {
-            Console.WriteLine("Be careful");
+            useebird = "Be careful";
+            return useebird;
         }
 
     }
