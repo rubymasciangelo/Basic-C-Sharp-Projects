@@ -25,18 +25,27 @@ namespace MuchMath
                 Okurrr.SomeMath(input1);
             }
 
-            //if (input2 != "")
-            //{
-            //    Okurrr answer = new Okurrr();
-            //    answer.SomeMath(input1, input2);
-            //}
-            //else
-            //{
-            //    Okurrr answer = new Okurrr();
-            //    answer.SomeMath(input1);
-            //}
-
             Console.ReadKey();
         }
+
+        //old
+        //{
+        //    Console.WriteLine("Please input an integer: ");
+        //    string input1 = Console.ReadLine();
+        //    Console.WriteLine("You totally don't have to but you may add a second number: ");
+        //    string input2 = Console.ReadLine();
+        //    if (input2 != "")
+        //    {
+        //        Okurrr answer = new Okurrr();
+        //        answer.SomeMath(input1, input2);
+        //    }
+        //    else
+        //    {
+        //        Okurrr answer = new Okurrr();
+        //        answer.SomeMath(input1);
+        //    }
+
+        //    Console.ReadKey();
+        //}
     }
 }

@@ -16,7 +16,23 @@ namespace VeryMethod
             BigStaticClass printResult = new BigStaticClass();
             printResult.HalfIt(input1);
 
+            BigStaticClass hmmm = new BigStaticClass();
+            hmmm.confuse(out input1);
+
             Console.ReadKey();
         }
+
+        //example sort of
+        //{
+        //    int a;
+        //    int b;
+        //    Program p = new Program();
+        //    p.DoSomething(out a, out b);
+        //}
+        //public void DoSomething(out int x, out int y)
+        //{
+        //    x = 5;
+        //    y = 20;
+        //}
     }
 }

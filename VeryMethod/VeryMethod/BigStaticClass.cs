@@ -10,12 +10,13 @@ namespace VeryMethod
     {
         public void HalfIt(string input1)
         {
-            int result = Convert.ToInt16(input1) / 2;
-            Console.WriteLine();
+            double result = Convert.ToDouble(input1) / 2;
+            Console.WriteLine(result);
         }
-        public static void Minus2(out int notsure)
+        public void confuse(out string notsure)
         {
-            notsure = 4;
+            notsure = "why tho";
+            Console.WriteLine(notsure);
         }
 
 
