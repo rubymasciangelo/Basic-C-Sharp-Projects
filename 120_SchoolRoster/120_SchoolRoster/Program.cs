@@ -10,6 +10,12 @@ namespace _120_SchoolRoster
     {
         static void Main(string[] args)
         {
+            Employee employee1 = new Employee();
+            employee1.FirstName = "Sample";
+            employee1.LastName = "Student";
+
+            employee1.SayName();
+            Console.ReadKey();
         }
     }
 }
