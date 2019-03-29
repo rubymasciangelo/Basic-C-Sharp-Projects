@@ -18,7 +18,10 @@ namespace VeryMethod
             notsure = "why tho";
             Console.WriteLine(notsure);
         }
+        public static void overload(int yesNumber)
+        {
 
+        }
 
     }
 }

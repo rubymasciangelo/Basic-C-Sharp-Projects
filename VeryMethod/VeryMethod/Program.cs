@@ -17,7 +17,7 @@ namespace VeryMethod
             printResult.HalfIt(input1);
 
             BigStaticClass hmmm = new BigStaticClass();
-            hmmm.confuse(out input1);
+            hmmm.confuse(out input1); //an out parameter that displays a message in response to input being entered
 
             Console.ReadKey();
         }
