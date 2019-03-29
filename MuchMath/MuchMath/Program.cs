@@ -11,19 +11,30 @@ namespace MuchMath
         static void Main(string[] args)
         {
             Console.WriteLine("Please input an integer: ");
-            string input1 = Console.ReadLine();
+            int input1 = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("You totally don't have to but you may add a second number: ");
             string input2 = Console.ReadLine();
-            if (input2 != "")
+
+            if (input2 != "") //this works but I feel like it defeats the purpose of an opptional parameter?
             {
-                Okurrr answer = new Okurrr();
-                answer.SomeMath(input1, input2);
+                int input2live = Convert.ToInt16(input2);
+                Okurrr.SomeMath(input1, input2live);
             }
             else
             {
-                Okurrr answer = new Okurrr();
-                answer.SomeMath(input1);
+                Okurrr.SomeMath(input1);
             }
+
+            //if (input2 != "")
+            //{
+            //    Okurrr answer = new Okurrr();
+            //    answer.SomeMath(input1, input2);
+            //}
+            //else
+            //{
+            //    Okurrr answer = new Okurrr();
+            //    answer.SomeMath(input1);
+            //}
 
             Console.ReadKey();
         }
