@@ -21,12 +21,20 @@ namespace VeryMethod
 
             Console.ReadKey();
 
-            Console.WriteLine("Are you happy? Yes or No: ");
-            string inputHappy = Console.ReadLine();
-            Console.WriteLine("Have you seen a bird today? If you have not, just hit enter. If you have, type yes and hit enter: ");
+            Console.WriteLine("Are you a bird: yes or no");
             string inputBird = Console.ReadLine();
+            Console.WriteLine("Have you seen a bird today? If you have not, just hit enter. If you have, type yes and hit enter: ");
+            string inputSeenBird = Console.ReadLine();
 
-
+            if (inputSeenBird != "")
+            {
+                BigStaticClass.overload(inputBird, inputSeenBird);
+            }
+            else
+            {
+                BigStaticClass.overload(inputBird);
+            }
+            Console.ReadKey();
         }
 
         //example sort of

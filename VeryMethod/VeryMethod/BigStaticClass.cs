@@ -19,11 +19,11 @@ namespace VeryMethod
             Console.WriteLine(notsure);
         }
 
-        public static void overload(string inputHappy)
+        public static void overload(string inputBird)
         {
             Console.WriteLine("Ok great");
         }
-        public static void overload(string inputHappy, string inputBird)
+        public static void overload(string inputBird, string inputSeenBird)
         {
             Console.WriteLine("Be careful");
         }
