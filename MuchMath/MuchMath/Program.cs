@@ -20,7 +20,7 @@ namespace MuchMath
                 int input2live = Convert.ToInt16(input2);
                 Okurrr.SomeMath(input1, input2live);
             }
-            else  //doing this prevents an error being thrown for converting a null string value for input2 to int
+            else  //doing this ifelse prevents an error being thrown for converting a null string value for input2 to int
             {
                 Okurrr.SomeMath(input1);
             }
