@@ -28,7 +28,7 @@ namespace MuchMath
             Console.ReadKey();
         }
 
-        //old
+        //old overloading
         //{
         //    Console.WriteLine("Please input an integer: ");
         //    string input1 = Console.ReadLine();
