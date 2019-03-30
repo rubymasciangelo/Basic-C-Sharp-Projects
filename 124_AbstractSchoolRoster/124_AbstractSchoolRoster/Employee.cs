@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace _124_AbstractSchoolRoster
 {
-    public abstract class Person
+    class Employee : Person
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        public virtual void SayName() { }
-  
+        public override void SayName()
+        {
+            Console.WriteLine("Name: " + FirstName + " " + LastName);
+        }
     }
 }
