@@ -10,8 +10,12 @@ namespace _126_InterfaceSchoolRoster
     {
         static void Main(string[] args)
         {
-            IQuittable employee2 = new Employee();
-            employee2.Quit();
+            IQuittable displayQuitMessage = new Employee();
+            displayQuitMessage.Quit();
+            Console.ReadKey();
+
+            IQuittable displayDropOutMessage = new Student();
+            displayDropOutMessage.Quit();
             Console.ReadKey();
 
             Employee employee1 = new Employee();
