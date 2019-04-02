@@ -17,14 +17,26 @@ namespace _129_SchoolRosterIDCompare
 
         public static bool operator ==(Employee employee1, Employee employee2)
         {
-            employee1.Id.CompareTo(employee2.Id);
-            return true | false;
+            if (employee1.Id == employee2.Id)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static bool operator !=(Employee employee1, Employee employee2)
         {
-            employee1.Id.CompareTo(employee2.Id);
-            return true | false;
+            if (employee1.Id != employee2.Id)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
