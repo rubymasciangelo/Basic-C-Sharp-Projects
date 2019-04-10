@@ -94,29 +94,6 @@ namespace _140_Lambda
                 }
 
 
-
-                //bool Joes = employees.Exists(x => x.FirstName.Contains("Joe"));
-                //List<Employee> Joes = from emp in employees where emp.FirstName.Contains("Joe") select emp.FirstName;
-                //var Joes = (from emp in employees where emp.FirstName.Contains("Joe") select emp).ToArray();
-
-                //Func<Employee> isJoe = (emp => { return emp.FirstName.Contains("Joe") ? true : false});
-                //var Joes = employees.Where(emp => emp.FirstName == "Joe").Select(emp => emp.FirstName);
-                /*foreach (Employee Joe in Joes) {
-                    Console.WriteLine(Joe);
-                }*/
-                //foreach (Employee emp in employees.FindAll(e => (e.FirstName.Contains("Joe"))))
-                //{
-                //    Console.WriteLine(emp.FirstName + " " + emp.LastName + " " + emp.ID);
-                //}
-                //List<Employee> Joes = employees.Where(x => x.FirstName.Contains("Joe")).ToString();
-                //Console.WriteLine(Joes);
-                //Console.Write(from emp in employees where isJoe(emp) select emp);
-
-                //Employee idgreater = employees.Where(x => x.ID > 5);
-                //Console.WriteLine(idgreater);
-
-
-
                 Console.ReadKey();
             }
         }
