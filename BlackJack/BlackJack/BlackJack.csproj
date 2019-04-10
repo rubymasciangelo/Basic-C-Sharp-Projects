@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlackJackDealer.cs" />
     <Compile Include="BlackJackGame.cs" />
+    <Compile Include="BlackJackRules.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="Dealer.cs" />
     <Compile Include="Deck.cs" />
