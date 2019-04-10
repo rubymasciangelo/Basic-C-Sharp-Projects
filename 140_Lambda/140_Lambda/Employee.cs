@@ -9,6 +9,7 @@ namespace _140_Lambda
     class Employee : Person
     {
         public int ID { get; set; }
+
         
     }
 }

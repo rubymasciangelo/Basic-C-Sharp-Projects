@@ -73,13 +73,49 @@ namespace _140_Lambda
                 employees.Add(employee9);
                 employees.Add(employee10);
 
-                foreach (Employee employee in employees) //printing the info for any employee on the list named joe 
+                //List<Employee> joeList = new List<Employee>();
+
+                //foreach (Employee employee in employees) //adding any employee on the list named joe to a new list of joes
+                //{
+                //    if (employee.FirstName == "Joe")
+                //    {
+                //        joeList.Add(employee);
+                //    }
+                //}
+                //foreach (Employee joe in joeList)
+                //{
+                //    Console.WriteLine(joe.FirstName + " " + joe.LastName);
+                //}
+
+                List<Employee> joes = employees.Where(name => name.FirstName == "Joe").ToList(); //adding any employee "where" the FirstName is joe to a new list of joes using a lambda expression
+                foreach (Employee joe in joes)
                 {
-                    if (employee.FirstName == "Joe")
-                    {
-                        Console.WriteLine(employee.FirstName + " " + employee.LastName + " " + employee.ID);
-                    }
+                    Console.WriteLine(joe.FirstName + " " + joe.LastName);
                 }
+
+
+
+                //bool Joes = employees.Exists(x => x.FirstName.Contains("Joe"));
+                //List<Employee> Joes = from emp in employees where emp.FirstName.Contains("Joe") select emp.FirstName;
+                //var Joes = (from emp in employees where emp.FirstName.Contains("Joe") select emp).ToArray();
+
+                //Func<Employee> isJoe = (emp => { return emp.FirstName.Contains("Joe") ? true : false});
+                //var Joes = employees.Where(emp => emp.FirstName == "Joe").Select(emp => emp.FirstName);
+                /*foreach (Employee Joe in Joes) {
+                    Console.WriteLine(Joe);
+                }*/
+                //foreach (Employee emp in employees.FindAll(e => (e.FirstName.Contains("Joe"))))
+                //{
+                //    Console.WriteLine(emp.FirstName + " " + emp.LastName + " " + emp.ID);
+                //}
+                //List<Employee> Joes = employees.Where(x => x.FirstName.Contains("Joe")).ToString();
+                //Console.WriteLine(Joes);
+                //Console.Write(from emp in employees where isJoe(emp) select emp);
+
+                //Employee idgreater = employees.Where(x => x.ID > 5);
+                //Console.WriteLine(idgreater);
+
+
 
                 Console.ReadKey();
             }
