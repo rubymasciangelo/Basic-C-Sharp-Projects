@@ -14,8 +14,11 @@ namespace _154_numberLog
             Console.WriteLine("Please input a number:");
             string input = Console.ReadLine();
             File.WriteAllText(@"C:\Users\Student\Desktop\Basic_CS_Projects\Basic-C-Sharp-Projects\154_numberLog\log.txt", input);
-        }   //writes user input as a string to the log.txt
+            //writes user input as a string to the log.txt
             string read = File.ReadAllText(@"C:\Users\Student\Desktop\Basic_CS_Projects\Basic-C-Sharp-Projects\154_numberLog\log.txt");
             //reads user input from log.txt
+            Console.WriteLine(read); //prints the text to the console
+            Console.Read();
+        }
     }
 }
