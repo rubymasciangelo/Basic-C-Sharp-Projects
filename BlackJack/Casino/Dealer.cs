@@ -22,6 +22,7 @@ namespace Casino
             {
                 file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
+
             }
                 Deck.Cards.RemoveAt(0);
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,9 @@ namespace BlackJackC
     {
         static void Main(string[] args)
         {
+            const string casinoName = "Grand Hotel and Casino";
 
-            Console.WriteLine("Welcome to the Grand Hotel and Casino. Let's start by telling me your name.");
+            Console.WriteLine("Welcome to the {0}. Let's start by telling me your name.", casinoName);
             string playerName = Console.ReadLine();
             Console.WriteLine("How much money did you bring today?");
             int bank = Convert.ToInt32(Console.ReadLine());
@@ -23,6 +25,12 @@ namespace BlackJackC
             if (answer == "yes" || answer == "yeah" || answer == "yaas")
             {
                 Player player = new Player(playerName, bank);
+                player.Id = Guid.NewGuid();
+                using (StreamWriter file = new StreamWriter(@"C:\Users\Student\Desktop\Basic_CS_Projects\Basic-C-Sharp-Projects\BlackJack\log.txt", true))
+                {
+                    file.WriteLine(player.Id);
+
+                }
                 Game game = new BlackJackGame();
                 game += player;
                 player.isActivelyPlaying = true;
