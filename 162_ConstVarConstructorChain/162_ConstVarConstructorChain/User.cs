@@ -19,10 +19,8 @@ namespace _162_ConstVarConstructorChain
         {
             this.Name = Name;
         }
-        //public User(string Name, int Age)
         public User(int Age)
         {
-            //this.Name = Name;
             this.Age = Age;
         }
     }

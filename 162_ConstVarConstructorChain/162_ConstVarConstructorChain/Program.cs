@@ -15,11 +15,13 @@ namespace _162_ConstVarConstructorChain
             var inputName = Console.ReadLine();
 
             Console.WriteLine("{0} age:", prompt);
-            var inputAge = Convert.ToInt32(Console.ReadLine());
+            int inputAge = Convert.ToInt32(Console.ReadLine());
 
             User user1 = new User();
             user1.Name = inputName;
             user1.Age = inputAge;
+
+
 
             Console.WriteLine("Your new code name is {0}{1}", user1.Name, user1.Age);
             Console.Read();
