@@ -15,7 +15,7 @@ namespace _165_AgeExceptionHandling
                 Console.WriteLine("How old are you?");
                 int age = Convert.ToInt16(Console.ReadLine());
                 
-                if (age < 1)
+                if (age < 1) //throws specific exception if age is 0 or negative
                 {
                     throw new ArgumentOutOfRangeException();
                 }
