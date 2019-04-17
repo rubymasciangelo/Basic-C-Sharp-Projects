@@ -11,7 +11,7 @@ namespace _162_ConstVarConstructorChain
         public string Name;
         public int Phone;
 
-        public User() //including default constructor so that I do not have to add default parameters
+        public User() //mosh tutorial advised including default constructor so that I do not have to add default parameters
         {
         }
         public User(string userName)
