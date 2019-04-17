@@ -14,13 +14,14 @@ namespace _165_AgeExceptionHandling
             {
                 Console.WriteLine("How old are you?");
                 int age = Convert.ToInt16(Console.ReadLine());
-                int birthYear = DateTime.Now.Year - age;
-                Console.WriteLine("You were born in {0}", birthYear);
                 
                 if (age < 1)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
+
+                int birthYear = DateTime.Now.Year - age;
+                Console.WriteLine("You were born in {0}", birthYear);
             }
             catch(ArgumentOutOfRangeException)
             {
