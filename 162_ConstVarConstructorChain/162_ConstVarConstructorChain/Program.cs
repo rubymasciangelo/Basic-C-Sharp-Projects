@@ -10,20 +10,12 @@ namespace _162_ConstVarConstructorChain
     {
         static void Main(string[] args)
         {
-            const string prompt = "Please enter your";
-            Console.WriteLine("Welcome! {0} name:", prompt);
-            var inputName = Console.ReadLine();
+            const string hiFrance = "Bonjour"; //const french greeting message
+            Console.WriteLine(hiFrance);
 
-            Console.WriteLine("{0} age:", prompt);
-            int inputAge = Convert.ToInt32(Console.ReadLine());
-
-            User user1 = new User();
-            user1.Name = inputName;
-            user1.Age = inputAge;
-
-
-
-            Console.WriteLine("Your new code name is {0}{1}", user1.Name, user1.Age);
+            var user1 = new User("Salma Hyek", 911); //initializing constructor with a var
+            Console.WriteLine(user1.Name);
+            Console.WriteLine(user1.Phone);
             Console.Read();
 
         }
