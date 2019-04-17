@@ -35,7 +35,7 @@ namespace Casino.BlackJack
                 }
                 if (bet <0)
                 {
-                    throw new FraudException();
+                    throw new FraudException("Security has been summoned.");
                 }
                 bool successfullyBet = player.Bet(bet);
                 if (!successfullyBet)
