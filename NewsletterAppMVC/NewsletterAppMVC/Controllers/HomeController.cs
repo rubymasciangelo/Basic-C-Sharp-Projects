@@ -5,11 +5,14 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NewsletterAppMVC.Models;
 
 namespace NewsletterAppMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
         public ActionResult Index()
         {
             return View();
@@ -23,9 +26,7 @@ namespace NewsletterAppMVC.Controllers
                 return View("~/Views/Shared/Error.cshtml");
             }
             else
-            {
-                string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
+            { 
                 string queryString = @"INSERT INTO SignUps (FirstName, LastName, EmailAddress) VALUES
                                         (@FirstName, @LastName, @EmailAddress)";
 
@@ -48,18 +49,31 @@ namespace NewsletterAppMVC.Controllers
             }
         }
 
-        public ActionResult About()
+        public ActionResult Admin()
         {
-            ViewBag.Message = "Your application description page.";
+            string queryString = @"SELECT ID, FirstName, LastName, EmailAddress from Signups";
+            List<NewsletterSignUp> signups = new List<NewsletterSignUp>();
 
-            return View();
-        }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+                connection.Open();
 
-            return View();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var signup = new NewsletterSignUp();
+                    signup.ID = Convert.ToInt32(reader["ID"]);
+                    signup.FirstName = reader["FirstName"].ToString();
+                    signup.LastName = reader["LastName"].ToString();
+                    signup.EmailAddress = reader["EmailAddress"].ToString();
+                    signups.Add(signup);
+                }
+            }
+
+                return View(signups);
         }
     }
 }
