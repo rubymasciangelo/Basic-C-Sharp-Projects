@@ -9,33 +9,33 @@
             {
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                        <input name="FirstName" type="text" class="form-control" placeholder="First Name" required />
                     </div>
                     <div class="form-group col-md-12">
-                        <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                        <input name="LastName" type="text" class="form-control" placeholder="Last Name" required />
                     </div>
                     <div class="form-group col-md-12">
-                        <input name="EmailAddress" type="text" class="form-control" placeholder="Email Address" />
+                        <input name="EmailAddress" type="text" class="form-control" placeholder="Email Address" required />
                     </div>
                 </div>
                 <div class="form-inline row">
                     <label for="DoB" class="mb-4 mr-sm-2 col-md-2">Date of Birth:</label>
-                    <input name="MM" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="MM" />
-                    <input name="DD" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="DD" />
-                    <input name="YYYY" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="YYYY" />
+                    <input name="MM" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="MM" required />
+                    <input name="DD" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="DD" required />
+                    <input name="YYYY" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="YYYY" required />
                 </div>
                 <div class="form-inline row">
                     <label for="Year" class="mb-4 mr-sm-2 col-sm-1">Year:</label>
-                    <input name="Year" type="number" class="form-control mb-4 mr-sm-2 col-sm-2" placeholder="YYYY" />
+                    <input name="Year" type="number" class="form-control mb-4 mr-sm-2 col-sm-2" placeholder="YYYY" required />
                     <label for="Make" class="mb-4 mr-sm-2 col-sm-1">Make:</label>
-                    <select name="Make" class="form-control mb-4 mr-sm-2 col-sm-2">
+                    <select name="Make" class="form-control mb-4 mr-sm-2 col-sm-2" required >
                         <option>Suzuki</option>
                         <option>Porsche</option>
                         <option>Subaru</option>
                         <option>Honda</option>
                     </select>
                     <label for="Model" class="mb-4 mr-sm-2 col-sm-1">Model:</label>
-                    <select name="Model" class="form-control mb-4 mr-sm-2 col-sm-2 col-lg-3">
+                    <select name="Model" class="form-control mb-4 mr-sm-2 col-sm-2 col-lg-3" required >
                         <optgroup label="Suzuki">
                             <option>Cappuccino</option>
                         </optgroup>
@@ -57,18 +57,18 @@
                 </div>
                 <div class="row ">
                     <label for="DUI" class="mb-4 col-sm-4 col-lg-3">Have you ever gotten a DUI?</label>
-                    <select name="DUI" class="form-control mb-4 col-sm-2">
+                    <select name="DUI" class="form-control mb-4 col-sm-2" required>
                         <option>Yes</option>
                         <option>No</option>
                     </select>
                 </div>
                 <div class="row">
                     <label for="Tickets" class="mb-4 col-sm-4 col-lg-5">How many speeding tickets have you gotten?</label>
-                    <input name="Tickets" type="number" class="form-control mb-4 col-sm-2" />
+                    <input name="Tickets" type="number" class="form-control mb-4 col-sm-2" required />
                 </div>
                 <div class="row ">
                     <label for="InsuranceType" class="mb-4 col-sm-4 col-md-4 col-lg-5">Select your preferred type of insurance:</label>
-                    <select name="InsuranceType" class="form-control mb-4 col-sm-4 col-md-4">
+                    <select name="InsuranceType" class="form-control mb-4 col-sm-4 col-md-4" required>
                         <option>Full Coverage</option>
                         <option>Liability</option>
                     </select>
