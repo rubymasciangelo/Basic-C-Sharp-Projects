@@ -12,6 +12,12 @@ namespace VroomInsurance.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Apply(string firstName, string lastName, string emailAddress, int MM, int DD, int YYYY, int year,
+                            string make, string model, string DUI, int tickets, string insuranceType)
+        {
+            return View("Applied");
+        }
 
         public ActionResult About()
         {
