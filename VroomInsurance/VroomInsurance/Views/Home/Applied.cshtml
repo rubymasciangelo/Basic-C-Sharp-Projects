@@ -1,1 +1,4 @@
-﻿<h2>Based on your application, your monthly quote from Vroom Insurance is $@Quote</h2>
+﻿@using VroomInsurance.Models
+@model Quote
+
+<h2>Based on your application, your monthly quote from Vroom Insurance is $@Quote.driverQuote()</h2>
