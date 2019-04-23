@@ -18,13 +18,13 @@
                         <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" required />
                     </div>
                 </div>
-                <div class="form-inline row">
+                <div class="form-inline row no-gutters">
                     <label for="DoB" class="mb-4 mr-sm-2 col-md-2">Date of Birth:</label>
                     <input name="MM" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="MM" required />
                     <input name="DD" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="DD" required />
                     <input name="YYYY" type="number" class="form-control mb-4 mr-sm-2 col-md-3" placeholder="YYYY" required />
                 </div>
-                <div class="form-inline row">
+                <div class="form-inline row no-gutters">
                     <label for="Year" class="mb-4 mr-sm-2 col-sm-1">Year:</label>
                     <input name="Year" type="number" class="form-control mb-4 mr-sm-2 col-sm-2" placeholder="YYYY" required />
                     <label for="Make" class="mb-4 mr-sm-2 col-sm-1">Make:</label>
@@ -55,23 +55,26 @@
                         </optgroup>
                     </select>
                 </div>
-                <div class="row ">
+                <div class="row no-gutters">
                     <label for="DUI" class="mb-4 col-sm-4 col-lg-3">Have you ever gotten a DUI?</label>
                     <select name="DUI" class="form-control mb-4 col-sm-2" required>
                         <option>Yes</option>
                         <option>No</option>
                     </select>
                 </div>
-                <div class="row">
+                <div class="row no-gutters">
                     <label for="Tickets" class="mb-4 col-sm-4 col-lg-5">How many speeding tickets have you gotten?</label>
                     <input name="Tickets" type="number" class="form-control mb-4 col-sm-2" required />
                 </div>
-                <div class="row ">
+                <div class="row no-gutters">
                     <label for="InsuranceType" class="mb-4 col-sm-4 col-md-4 col-lg-5">Select your preferred type of insurance:</label>
                     <select name="InsuranceType" class="form-control mb-4 col-sm-4 col-md-4" required>
                         <option>Full Coverage</option>
                         <option>Liability</option>
                     </select>
+                </div>
+                <div class="row no-gutters">
+                    <button type="submit" class="btn btn-block btn-primary">Submit</button>
                 </div>
             }
 
