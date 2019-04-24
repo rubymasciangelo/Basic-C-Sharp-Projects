@@ -19,6 +19,7 @@ namespace VroomInsurance.Controllers
         public string InsuranceType { get; set; }
         
         // GET: Quote
+        [HttpPost]
         public ActionResult Index()
         {
             decimal driverQuote = 50;
