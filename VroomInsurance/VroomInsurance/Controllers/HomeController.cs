@@ -33,28 +33,14 @@ namespace VroomInsurance.Controllers
                 application.Tickets = tickets;
                 application.InsuranceType = insuranceType;
 
+                db.Applications.Add(application);
+                db.SaveChanges();
             }
+
+            return View("Applied");
         }
 
-        public ActionResult Admin()
-        {
-            using (InsuranceEntities db = new InsuranceEntities())
-            {
-                var applications = db.Applications;
-                var applicationVms = new List<ApplicationVM>();
-                foreach (var application in applications)
-                {
-                    var applicationVm = new ApplicationVM();
-                    applicationVm.Quote = application.Quote;
-                    applicationVm.FirstName = application.FirstName;
-                    applicationVm.LastName = application.LastName;
-                    applicationVm.EmailAddress = application.EmailAddress;
-                    applicationVms.Add(applicationVm);
-                }
-
-                return View(applicationVms);
-            }
-        }
+        
 
         
     }
