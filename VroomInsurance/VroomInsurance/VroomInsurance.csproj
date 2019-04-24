@@ -127,7 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs">
+    <Compile Include="Models\Application.cs">
       <DependentUpon>Insurance.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -138,22 +138,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Insurance.Context.cs">
+    <Compile Include="Models\Insurance.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Insurance.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Insurance.cs">
+    <Compile Include="Models\Insurance.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Insurance.tt</DependentUpon>
     </Compile>
-    <Compile Include="Insurance.Designer.cs">
+    <Compile Include="Models\Insurance.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Insurance.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\InsuranceApplications.cs" />
     <Compile Include="Models\Quote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ApplicationVM.cs" />
@@ -168,12 +167,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Insurance.Context.tt">
+    <Content Include="Models\Insurance.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Insurance.edmx</DependentUpon>
       <LastGenOutput>Insurance.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Insurance.tt">
+    <Content Include="Models\Insurance.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Insurance.edmx</DependentUpon>
       <LastGenOutput>Insurance.cs</LastGenOutput>
@@ -200,11 +199,11 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="Insurance.edmx">
+    <EntityDeploy Include="Models\Insurance.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Insurance.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Insurance.edmx.diagram">
+    <Content Include="Models\Insurance.edmx.diagram">
       <DependentUpon>Insurance.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

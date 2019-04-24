@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VroomInsurance
+namespace VroomInsurance.Models
 {
     using System;
     using System.Data.Entity;

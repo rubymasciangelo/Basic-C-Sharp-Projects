@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VroomInsurance.Models;
 using VroomInsurance.ViewModels;
 
 namespace VroomInsurance.Controllers
