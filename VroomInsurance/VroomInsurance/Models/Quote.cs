@@ -34,37 +34,37 @@ namespace VroomInsurance.Models
             {
                 driverQuote = driverQuote + 100;
             }
-             return driverQuote;
+            
 
             if (Year < 2000 || Year > 2015)
             {
                 driverQuote = driverQuote + 25;
             }
-            return driverQuote;
+            
 
             if (Make == "Porsche")
             {
                 driverQuote = driverQuote + 25;
             }
-            return driverQuote;
+            
 
             if (Make == "Porsche" && Model == "911 Carrera")
             {
                 driverQuote = driverQuote + 25;
             }
-            return driverQuote;
+            
 
             if (Tickets > 0)
             {
                 driverQuote = driverQuote + (10 * Tickets);
             }
-            return driverQuote;
+            
 
             if (DUI == "Yes")
             {
                 driverQuote = driverQuote + (driverQuote / 4);
             }
-            return driverQuote;
+            
 
             if (InsuranceType == "Full Coverage")
             {
