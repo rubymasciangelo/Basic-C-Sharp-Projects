@@ -127,6 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\QuoteController.cs" />
     <Compile Include="Models\Application.cs">
       <DependentUpon>Insurance.tt</DependentUpon>
     </Compile>
@@ -251,6 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Quote\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
