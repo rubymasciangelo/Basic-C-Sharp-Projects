@@ -17,7 +17,7 @@ namespace VroomInsurance.Models
         public int Tickets { get; set; }
         public string InsuranceType { get; set; }
 
-        public decimal driverQuote(decimal quote)
+        public decimal DriverQuote(decimal quote)
         {
             decimal driverQuote = 50;
     
@@ -70,7 +70,9 @@ namespace VroomInsurance.Models
             {
                 driverQuote = driverQuote + (driverQuote / 2);
             }
-            return driverQuote;
+            return driverQuote = ApplicantQuote;
         }
+
+        public decimal ApplicantQuote { get; set; }
     }
 }

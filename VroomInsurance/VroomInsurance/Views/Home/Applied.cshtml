@@ -1,4 +1,7 @@
 ﻿@using VroomInsurance.Models
-@model Quote
+@model List<Quote>
 
-<h2>Based on your application, your monthly quote from Vroom Insurance is </h2>
+@foreach (var applicant in Model)
+{
+    <h2>Based on your application, your monthly quote from Vroom Insurance is @applicant.ApplicantQuote </h2>
+}
