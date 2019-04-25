@@ -13,7 +13,7 @@ namespace VroomInsurance.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            using (InsuranceEntities db = new InsuranceEntities())
+            using (InsuranceEntities1 db = new InsuranceEntities1())
             {
                 var applications = db.Applications;
                 var applicationVms = new List<ApplicationVM>();

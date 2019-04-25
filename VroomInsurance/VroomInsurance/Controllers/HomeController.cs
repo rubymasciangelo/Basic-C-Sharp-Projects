@@ -16,30 +16,30 @@ namespace VroomInsurance.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult Apply(string firstName, string lastName, string emailAddress, int MM, int DD, int YYYY, Int16 year,
-                            string make, string model, string DUI, Int16 tickets, string insuranceType)
-        {
-            using (InsuranceEntities db = new InsuranceEntities())
-            {
-                var application = new Application();
-                application.FirstName = firstName;
-                application.LastName = lastName;
-                application.EmailAddress = emailAddress;
-                application.DoB = new DateTime(YYYY, MM, DD);
-                application.Year = year;
-                application.Make = make;
-                application.Model = model;
-                application.DUI = DUI;
-                application.Tickets = tickets;
-                application.InsuranceType = insuranceType;
+        //[HttpPost]
+        //public ActionResult Apply(string firstName, string lastName, string emailAddress, int MM, int DD, int YYYY, Int16 year,
+        //                    string make, string model, string DUI, Int16 tickets, string insuranceType)
+        //{
+        //    using (InsuranceEntities db = new InsuranceEntities())
+        //    {
+        //        var application = new Application();
+        //        application.FirstName = firstName;
+        //        application.LastName = lastName;
+        //        application.EmailAddress = emailAddress;
+        //        application.DoB = new DateTime(YYYY, MM, DD);
+        //        application.Year = year;
+        //        application.Make = make;
+        //        application.Model = model;
+        //        application.DUI = DUI;
+        //        application.Tickets = tickets;
+        //        application.InsuranceType = insuranceType;
 
-                db.Applications.Add(application);
-                db.SaveChanges();
-            }
+        //        db.Applications.Add(application);
+        //        db.SaveChanges();
+        //    }
 
-            return View("Applied");
-        }
+        //    return View("Applied");
+        //}
 
     }
 }
