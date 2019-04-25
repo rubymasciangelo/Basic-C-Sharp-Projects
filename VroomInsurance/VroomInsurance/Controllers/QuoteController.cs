@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -101,6 +102,64 @@ namespace VroomInsurance.Controllers
             return RedirectToAction("Applied");    
         }
 
-        public ActionResult Edit
+        public ActionResult Edit(int? id) //id not being ID might become an issue
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Application application = db.Applications.Find(id);
+            if (application == null)
+            {
+                return HttpNotFound();
+            }
+            return View(application);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ID,Quote,FirstName,LastName,EmailAddress,MM,DD,YYYY,Year,Make,Model,DUI,Tickets,InsuranceType")] Application application)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(application).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(application);
+        }
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Application application = db.Applications.Find(id);
+            if (application == null)
+            {
+                return HttpNotFound();
+            }
+            return View(application);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Application application = db.Applications.Find(id);
+            db.Applications.Remove(application);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }
