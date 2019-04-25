@@ -50,7 +50,55 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
+                decimal driverQuote = 50;
+
                 var age = DateTime.Now.Year - insuree.DateOfBirth.Year;
+
+                if (age < 25 || age > 100)
+                {
+                    driverQuote = driverQuote + 25;
+                }
+                else if (age < 18)
+                {
+                    driverQuote = driverQuote + 100;
+                }
+
+
+                if (insuree.CarYear < 2000 || insuree.CarYear > 2015)
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (insuree.CarMake == "Porsche")
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (insuree.CarMake == "Porsche" && insuree.CarModel == "911 Carrera")
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (insuree.Tickets > 0)
+                {
+                    driverQuote = driverQuote + (10 * insuree.Tickets);
+                }
+
+
+                if (insuree.DUI == "Yes")
+                {
+                    driverQuote = driverQuote + (driverQuote / 4);
+                }
+
+
+                if (insuree.InsuranceType == "Full Coverage")
+                {
+                    driverQuote = driverQuote + (driverQuote / 2);
+                }
+                insuree.Quote = driverQuote;
 
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
