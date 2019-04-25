@@ -15,16 +15,18 @@ namespace VroomInsurance.Models
     public partial class Application
     {
         public int ID { get; set; }
-        public Nullable<decimal> Quote { get; set; }
+        public decimal Quote { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
-        public Nullable<System.DateTime> DoB { get; set; }
-        public Nullable<short> Year { get; set; }
+        public int MM { get; set; }
+        public int DD { get; set; }
+        public int YYYY { get; set; }
+        public int Year { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
         public string DUI { get; set; }
-        public Nullable<short> Tickets { get; set; }
+        public int Tickets { get; set; }
         public string InsuranceType { get; set; }
     }
 }

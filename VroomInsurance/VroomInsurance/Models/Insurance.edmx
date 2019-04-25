@@ -5,18 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="InsuranceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Insurance.dbo.Application' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Application">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
-          <Property Name="Quote" Type="money" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quote" Type="decimal" Precision="18" Scale="0" />
           <Property Name="FirstName" Type="varchar" MaxLength="50" />
           <Property Name="LastName" Type="varchar" MaxLength="50" />
           <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
-          <Property Name="DoB" Type="date" />
+          <Property Name="MM" Type="smallint" />
+          <Property Name="DD" Type="smallint" />
+          <Property Name="YYYY" Type="smallint" />
           <Property Name="Year" Type="smallint" />
           <Property Name="Make" Type="varchar" MaxLength="50" />
           <Property Name="Model" Type="varchar" MaxLength="50" />
@@ -25,22 +25,7 @@ warning 6002: The table/view 'Insurance.dbo.Application' does not have a primary
           <Property Name="InsuranceType" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="InsuranceModelStoreContainer">
-          <EntitySet Name="Application" EntityType="Self.Application" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Application].[ID] AS [ID], 
-    [Application].[Quote] AS [Quote], 
-    [Application].[FirstName] AS [FirstName], 
-    [Application].[LastName] AS [LastName], 
-    [Application].[EmailAddress] AS [EmailAddress], 
-    [Application].[DoB] AS [DoB], 
-    [Application].[Year] AS [Year], 
-    [Application].[Make] AS [Make], 
-    [Application].[Model] AS [Model], 
-    [Application].[DUI] AS [DUI], 
-    [Application].[Tickets] AS [Tickets], 
-    [Application].[InsuranceType] AS [InsuranceType]
-    FROM [dbo].[Application] AS [Application]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -51,12 +36,14 @@ warning 6002: The table/view 'Insurance.dbo.Application' does not have a primary
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="Quote" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quote" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DoB" Type="DateTime" Precision="0" />
+          <Property Name="MM" Type="Int16" />
+          <Property Name="DD" Type="Int16" />
+          <Property Name="YYYY" Type="Int16" />
           <Property Name="Year" Type="Int16" />
           <Property Name="Make" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -64,7 +51,7 @@ warning 6002: The table/view 'Insurance.dbo.Application' does not have a primary
           <Property Name="Tickets" Type="Int16" />
           <Property Name="InsuranceType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="InsuranceEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="InsuranceEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Applications" EntityType="Self.Application" />
         </EntityContainer>
       </Schema>
@@ -72,7 +59,7 @@ warning 6002: The table/view 'Insurance.dbo.Application' does not have a primary
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="InsuranceModelStoreContainer" CdmEntityContainer="InsuranceEntities">
+        <EntityContainerMapping StorageEntityContainer="InsuranceModelStoreContainer" CdmEntityContainer="InsuranceEntities1">
           <EntitySetMapping Name="Applications">
             <EntityTypeMapping TypeName="InsuranceModel.Application">
               <MappingFragment StoreEntitySet="Application">
@@ -81,7 +68,9 @@ warning 6002: The table/view 'Insurance.dbo.Application' does not have a primary
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
-                <ScalarProperty Name="DoB" ColumnName="DoB" />
+                <ScalarProperty Name="MM" ColumnName="MM" />
+                <ScalarProperty Name="DD" ColumnName="DD" />
+                <ScalarProperty Name="YYYY" ColumnName="YYYY" />
                 <ScalarProperty Name="Year" ColumnName="Year" />
                 <ScalarProperty Name="Make" ColumnName="Make" />
                 <ScalarProperty Name="Model" ColumnName="Model" />

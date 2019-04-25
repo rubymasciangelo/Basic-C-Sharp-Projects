@@ -127,10 +127,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\QuoteController.cs" />
     <Compile Include="Models\Application.cs">
       <DependentUpon>Insurance.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\QuoteController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

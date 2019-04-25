@@ -1,80 +1,106 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using VroomInsurance.Models;
 
 namespace VroomInsurance.Controllers
 {
     public class QuoteController : Controller
     {
-        public int MM { get; set; }
-        public int DD { get; set; }
-        public int YYYY { get; set; }
-        public int Year { get; set; }
-        public string Make { get; set; }
-        public string Model { get; set; }
-        public string DUI { get; set; }
-        public int Tickets { get; set; }
-        public string InsuranceType { get; set; }
-        
-        // GET: Quote
-        [HttpPost]
+        private InsuranceEntities1 db = new InsuranceEntities1();
+
         public ActionResult Index()
         {
-            decimal driverQuote = 50;
+            return View(db.Applications.ToList());
+        }
 
-            DateTime DOB = new DateTime(YYYY, MM, DD);
-            DateTime now = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day);
-
-            var age = Convert.ToInt16(now - DOB);
-
-            if (age < 25 || age > 100)
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
             {
-                driverQuote = driverQuote + 25;
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            else if (age < 18)
+            Application application = db.Applications.Find(id);
+            if (application == null)
             {
-                driverQuote = driverQuote + 100;
+                return HttpNotFound();
             }
+            return View(application);
+        }
 
-
-            if (Year < 2000 || Year > 2015)
-            {
-                driverQuote = driverQuote + 25;
-            }
-
-
-            if (Make == "Porsche")
-            {
-                driverQuote = driverQuote + 25;
-            }
-
-
-            if (Make == "Porsche" && Model == "911 Carrera")
-            {
-                driverQuote = driverQuote + 25;
-            }
-
-
-            if (Tickets > 0)
-            {
-                driverQuote = driverQuote + (10 * Tickets);
-            }
-
-
-            if (DUI == "Yes")
-            {
-                driverQuote = driverQuote + (driverQuote / 4);
-            }
-
-
-            if (InsuranceType == "Full Coverage")
-            {
-                driverQuote = driverQuote + (driverQuote / 2);
-            }
-            ViewBag.Result = driverQuote;
+        public ActionResult Create()
+        {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ID,Quote,FirstName,LastName,EmailAddress,MM,DD,YYYY,Year,Make,Model,DUI,Tickets,InsuranceType")] Application application)
+        {
+            if (ModelState.IsValid)
+            {
+                decimal driverQuote = 50;
+
+                DateTime DOB = new DateTime(application.YYYY, application.MM, application.DD);
+                DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+
+                var age = Convert.ToInt16(now - DOB);
+
+                if (age < 25 || age > 100)
+                {
+                    driverQuote = driverQuote + 25;
+                }
+                else if (age < 18)
+                {
+                    driverQuote = driverQuote + 100;
+                }
+
+
+                if (application.Year < 2000 || application.Year > 2015)
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (application.Make == "Porsche")
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (application.Make == "Porsche" && application.Model == "911 Carrera")
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (application.Tickets > 0)
+                {
+                    driverQuote = driverQuote + (10 * application.Tickets);
+                }
+
+
+                if (application.DUI == "Yes")
+                {
+                    driverQuote = driverQuote + (driverQuote / 4);
+                }
+
+
+                if (application.InsuranceType == "Full Coverage")
+                {
+                    driverQuote = driverQuote + (driverQuote / 2);
+                }
+                application.Quote = driverQuote;
+            }
+
+                db.Applications.Add(application);
+                db.SaveChanges();
+            return RedirectToAction("Applied");    
+        }
+
+        public ActionResult Edit
     }
 }

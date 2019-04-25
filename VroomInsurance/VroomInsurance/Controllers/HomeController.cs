@@ -41,8 +41,5 @@ namespace VroomInsurance.Controllers
             return View("Applied");
         }
 
-        
-
-        
     }
 }
