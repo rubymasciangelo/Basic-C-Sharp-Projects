@@ -82,23 +82,23 @@ namespace CarInsurance.Controllers
                 }
 
 
-                if (insuree.Tickets > 0)
-                {
-                    driverQuote = driverQuote + (10 * insuree.Tickets);
-                }
+                //if (insuree.Tickets > 0)
+                //{
+                //    driverQuote = driverQuote + (10 * insuree.Tickets);
+                //}
 
 
-                if (insuree.DUI == "Yes")
-                {
-                    driverQuote = driverQuote + (driverQuote / 4);
-                }
+                //if (insuree.DUI == "Yes")
+                //{
+                //    driverQuote = driverQuote + (driverQuote / 4);
+                //}
 
 
-                if (insuree.InsuranceType == "Full Coverage")
-                {
-                    driverQuote = driverQuote + (driverQuote / 2);
-                }
-                insuree.Quote = driverQuote;
+                //if (insuree.InsuranceType == "Full Coverage")
+                //{
+                //    driverQuote = driverQuote + (driverQuote / 2);
+                //}
+                //insuree.Quote = driverQuote;
 
                 db.Insurees.Add(insuree);
                 db.SaveChanges();

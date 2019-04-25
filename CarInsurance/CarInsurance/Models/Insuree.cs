@@ -23,8 +23,6 @@ namespace CarInsurance.Models
         public string CarMake { get; set; }
         public string CarModel { get; set; }
         public bool DUI { get; set; }
-        public int Tickets { get; set; }
-        public string InsuranceType { get; set; }
         public decimal Quote { get; set; }
     }
 }
