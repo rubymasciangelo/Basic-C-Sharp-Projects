@@ -11,7 +11,11 @@ namespace VroomCarInsurance.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.Linq;
+    using System.Reflection;
+
     public partial class Applicant
     {
         public int ID { get; set; }
@@ -26,5 +30,35 @@ namespace VroomCarInsurance.Models
         public int SpeedingTickets { get; set; }
         public string CoverageType { get; set; }
         public decimal Quote { get; set; }
+
+
+
+        public enum Make
+        {
+            Suzuki,
+            Porsche,
+            Subaru,
+            Honda
+        }
+
+        public enum Model
+        {
+            Cappuccino,
+            [Display(Name = "911 Carrera")]
+            Carrera,
+            Macan,
+            Cayenne,
+            Outback,
+            WRX,
+            Crosstrek,
+            Civic,
+            Odyssey
+        }
+
+        public enum Coverage
+        {
+            Full Coverage,
+            Liability
+        }
     }
 }
