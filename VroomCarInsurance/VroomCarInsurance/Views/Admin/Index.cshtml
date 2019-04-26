@@ -1,4 +1,6 @@
-﻿@model IEnumerable<VroomCarInsurance.Models.Applicant>
+﻿@using VroomCarInsurance.ViewModels
+@model List<InsuranceVm>
+
 
 @{
     ViewBag.Title = "Index";
@@ -6,10 +8,37 @@
 
 <h2>Admin</h2>
 
-
-
-<td>
-    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-</td>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Monthly Quote</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var applicant in Model)
+        {
+        <tr>
+            <td>
+                @applicant.Quote
+            </td>
+            <td>
+                @applicant.FirstName
+            </td>
+            <td>
+                @applicant.LastName
+            </td>
+            <td>
+                @applicant.EmailAddress
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = applicant.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = applicant.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = applicant.ID })
+            </td>
+        </tr>
+    }
+        </tbody>
+    </table>

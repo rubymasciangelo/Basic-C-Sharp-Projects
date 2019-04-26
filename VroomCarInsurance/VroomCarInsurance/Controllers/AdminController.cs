@@ -25,6 +25,7 @@ namespace VroomCarInsurance.Controllers
                 {
                 var applicantVm = new InsuranceVm
                 {
+                    ID = applicant.ID,
                     Quote = applicant.Quote,
                     FirstName = applicant.FirstName,
                     LastName = applicant.LastName,
