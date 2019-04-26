@@ -154,6 +154,7 @@
       <DependentUpon>CarInsuranceEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\InsuranceVm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\CarInsurance.mdf" />
