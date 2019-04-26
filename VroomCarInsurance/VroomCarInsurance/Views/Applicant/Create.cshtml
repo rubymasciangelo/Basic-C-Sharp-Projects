@@ -1,5 +1,4 @@
 ﻿@model VroomCarInsurance.Models.Applicant
-
 @{
     ViewBag.Title = "Create";
 }
@@ -18,7 +17,7 @@
 
                 <div class="row">
                     <div class="form-group col-md-12">
-                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "First Name", required = "required"} })
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "First Name", required = "required" } })
                     </div>
                     <div class="form-group col-md-12">
                         @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last Name", required = "required" } })
@@ -45,14 +44,19 @@
                 <div class="form-inline no-gutters">
                     @Html.LabelFor(model => model.CarMake, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.EnumDropDownListFor(model => model.CarMake, new { htmlAttributes = new { @class = "form-control", required = "required" } }) 
+                        <select name="CarMake" id="CarMake" class="form-control" required>
+                            <option>Suzuki</option>
+                            <option>Porsche</option>
+                            <option>Subaru</option>
+                            <option>Honda</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="form-inline no-gutters">
                     @Html.LabelFor(model => model.CarModel, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        <select required>
+                        <select name="CarModel" id="CarModel" class="form-control" required>
                             <optgroup label="Suzuki">
                                 <option>Cappuccino</option>
                             </optgroup>
@@ -71,7 +75,6 @@
                                 <option>Odyssey</option>
                             </optgroup>
                         </select>
-                        @Html.EditorFor(model => model.CarModel, new { htmlAttributes = new { @class = "form-control"} })
                     </div>
                 </div>
 
@@ -88,15 +91,16 @@
                     @Html.LabelFor(model => model.SpeedingTickets, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.SpeedingTickets, new { htmlAttributes = new { @class = "form-control", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.SpeedingTickets, "", new { @class = "text-danger" })
                     </div>
                 </div>
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.CoverageType, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.CoverageType, new { htmlAttributes = new { @class = "form-control", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.CoverageType, "", new { @class = "text-danger" })
+                        <select name="CoverageType" id="CoverageType" class="form-control" required>
+                            <option>Full Coverage</option>
+                            <option>Liability</option>
+                        </select>
                     </div>
                 </div>
 
@@ -105,15 +109,15 @@
                         <input type="submit" value="Create" class="btn btn-default" />
                     </div>
                 </div>
-</div>
-</div>
-</div>
             }
+        </div>
+    </div>
+</div>
 
-            <div>
-                @Html.ActionLink("Back to List", "Index")
-            </div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
 
-            @section Scripts {
-                @Scripts.Render("~/bundles/jqueryval")
-            }
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -24,8 +24,8 @@ namespace VroomCarInsurance.Models
         public string EmailAddress { get; set; }
         public System.DateTime DateOfBirth { get; set; }
         public int CarYear { get; set; }
-        public Make CarMake { get; set; }
-        public string CarModel { get; set; }
+        public string CarMake { get; set; } //testing enumdropdown
+        public string CarModel { get; set; } //testing editorfor
         public bool DUI { get; set; }
         public int SpeedingTickets { get; set; }
         public string CoverageType { get; set; }
@@ -33,33 +33,33 @@ namespace VroomCarInsurance.Models
 
 
 
-        public enum Make
-        {
-            Suzuki,
-            Porsche,
-            Subaru,
-            Honda
-        }
+        //public enum Make
+        //{
+        //    Suzuki,
+        //    Porsche,
+        //    Subaru,
+        //    Honda
+        //}
 
-        public enum Model
-        {
-            Cappuccino,
-            [Display(Name = "911 Carrera")]
-            Carrera,
-            Macan,
-            Cayenne,
-            Outback,
-            WRX,
-            Crosstrek,
-            Civic,
-            Odyssey
-        }
+        //public enum Model
+        //{
+        //    Cappuccino,
+        //    [Display(Name = "911 Carrera")]
+        //    Carrera,
+        //    Macan,
+        //    Cayenne,
+        //    Outback,
+        //    WRX,
+        //    Crosstrek,
+        //    Civic,
+        //    Odyssey
+        //}
 
-        public enum Coverage
-        {
-            [Display(Name = "Full Coverage")]
-            Full,
-            Liability
-        }
+        //public enum Coverage
+        //{
+        //    [Display(Name = "Full Coverage")]
+        //    Full,
+        //    Liability
+        //}
     }
 }
