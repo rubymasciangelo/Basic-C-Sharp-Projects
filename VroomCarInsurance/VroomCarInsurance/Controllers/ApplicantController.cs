@@ -50,6 +50,56 @@ namespace VroomCarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
+                decimal driverQuote = 50;
+
+                var age = DateTime.Now.Year - applicant.DateOfBirth.Year;
+
+                if (age < 25 || age > 100)
+                {
+                    driverQuote = driverQuote + 25;
+                }
+                else if (age < 18)
+                {
+                    driverQuote = driverQuote + 100;
+                }
+
+
+                if (applicant.CarYear < 2000 || applicant.CarYear > 2015)
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (applicant.CarMake == "Porsche")
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (applicant.CarMake == "Porsche" && applicant.CarModel == "911 Carrera")
+                {
+                    driverQuote = driverQuote + 25;
+                }
+
+
+                if (applicant.SpeedingTickets > 0)
+                {
+                    driverQuote = driverQuote + (10 * applicant.SpeedingTickets);
+                }
+
+
+                if (applicant.DUI == true)
+                {
+                    driverQuote = driverQuote + (driverQuote / 4);
+                }
+
+
+                if (applicant.CoverageType == "Full Coverage")
+                {
+                    driverQuote = driverQuote + (driverQuote / 2);
+                }
+                applicant.Quote = driverQuote;
+
                 db.Applicants.Add(applicant);
                 db.SaveChanges();
                 return RedirectToAction("Index");
