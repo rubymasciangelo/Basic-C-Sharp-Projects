@@ -57,7 +57,8 @@ namespace VroomCarInsurance.Models
 
         public enum Coverage
         {
-            Full Coverage,
+            [Display(Name = "Full Coverage")]
+            Full,
             Liability
         }
     }
