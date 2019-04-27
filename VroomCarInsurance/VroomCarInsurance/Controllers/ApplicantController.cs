@@ -102,8 +102,9 @@ namespace VroomCarInsurance.Controllers
 
                 db.Applicants.Add(applicant);
                 db.SaveChanges();
+                return RedirectToAction("Details", new { id = applicant.ID });
             }
-            return RedirectToAction("Index");
+            return View(applicant);
         }
 
         // GET: Applicant/Edit/5
