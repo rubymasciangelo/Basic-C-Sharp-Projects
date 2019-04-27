@@ -3,8 +3,10 @@
     ViewBag.Title = "Create";
 }
 
+
+
 <div class="row no-gutters m-3">
-    <div class="card col-sm-12 col-md-10 col-lg-10 mx-auto shadow">
+    <div class="card col-sm-8 col-md-10 col-lg-10 mx-auto shadow">
         <div class="card-header text-center">
             <h3 class="m-0">Vroom Car Insurance</h3>
             <h5 class="m-0">Monthly Quote Application Form</h5>
@@ -15,40 +17,40 @@
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                <div class="row">
-                    <div class="form-group col-md-12">
+                <div class="row no-gutters container-fluid">
+                    <div class="form-group col-lg">
                         @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "First Name" } })
                         @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
                     </div>
-                    <div class="form-group col-md-12">
+                    <div class="form-group col-lg">
                         @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last Name" } })
                         @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
                     </div>
-                    <div class="form-group col-md-12">
+                </div>
+
+                <div class="row no-gutters container-fluid mb-3">
+                    <div class="form-inline col-lg mb-3">
                         @Html.EditorFor(model => model.EmailAddress, new { htmlAttributes = new { @class = "form-control", placeholder = "Email Address" } })
                         @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
                     </div>
-                </div>
+                    <div class="form-inline col-lg mb-3">
+                        <label for="DateOfBirth" class="col-form-label mr-3">Date of Birth:</label>
 
-                <div class="form-inline no-gutters">
-                    @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
                         @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+
                     </div>
                 </div>
+                <div class="row no-gutters container-fluid mb-3">
+                    <div class="form-inline mb-3">
+                        <label for="CarYear" class="col-form-label mr-3">Year of Car:</label>
 
-                <div class="form-inline no-gutters">
-                    @Html.LabelFor(model => model.CarYear, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
                         @Html.EditorFor(model => model.CarYear, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.CarYear, "", new { @class = "text-danger" })
                     </div>
-                </div>
 
-                <div class="form-inline no-gutters">
-                    @Html.LabelFor(model => model.CarMake, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+                    <div class="form-inline mb-3">
+                        <label for="CarMake" class="col-form-label ml-3 mr-3">Make of Car:</label>
                         <select name="CarMake" id="CarMake" class="form-control">
                             <option>Suzuki</option>
                             <option>Porsche</option>
@@ -57,11 +59,10 @@
                         </select>
                         @Html.ValidationMessageFor(model => model.CarMake, "", new { @class = "text-danger" })
                     </div>
-                </div>
 
-                <div class="form-inline no-gutters">
-                    @Html.LabelFor(model => model.CarModel, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
+
+                    <div class="form-inline mb-3">
+                        <label for="CarModel" class="col-form-label ml-3 mr-3">Model of Car:</label>
                         <select name="CarModel" id="CarModel" class="form-control">
                             <optgroup label="Suzuki">
                                 <option>Cappuccino</option>
@@ -85,39 +86,40 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.DUI, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        <div class="checkbox">
-                            @Html.EditorFor(model => model.DUI)
-                        </div>
+                <div class="row no-gutters container-fluid mb-3">
+                    <div class="form-inline mb-3">
+                        <label for="DUI" class="col-form-label ml-3 mr-3">DUI:</label>
+
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.DUI)
+                            </div>
+
+</div>
+
+                    <div class="form-inline mb-3">
+                        <label for="SpeedingTickets" class="col-form-label ml-3 mr-3">Speeding Tickets:</label>
+                            
+                                @Html.EditorFor(model => model.SpeedingTickets, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.SpeedingTickets, "", new { @class = "text-danger" })
+                            
+</div>
+
+                    <div class="form-inline mb-3">
+                        <label for="CoverageType" class="col-form-label ml-3 mr-3">Coverage Type:</label>
+                       
+                            <select name="CoverageType" id="CoverageType" class="form-control">
+                                <option>Full Coverage</option>
+                                <option>Liability</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.CoverageType, "", new { @class = "text-danger" })
+                        
                     </div>
                 </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.SpeedingTickets, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.SpeedingTickets, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.SpeedingTickets, "", new { @class = "text-danger" })
+                    <div align="center">
+                        <input type="submit" value="Create" class="btn btn-dark btn-block justify-content-center">
                     </div>
-                </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.CoverageType, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        <select name="CoverageType" id="CoverageType" class="form-control">
-                            <option>Full Coverage</option>
-                            <option>Liability</option>
-                        </select>
-                        @Html.ValidationMessageFor(model => model.CoverageType, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Create" class="btn btn-default" />
-                    </div>
-                </div>
 
 
             }
@@ -125,9 +127,7 @@
     </div>
 </div>
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
