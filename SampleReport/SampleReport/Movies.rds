@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Movies">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Movies</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>82f0584d-1d16-495f-bfb0-20ab959632b3</DataSourceID>
+</RptDataSource>

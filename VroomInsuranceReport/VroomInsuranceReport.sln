@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "VroomInsuranceReport", "VroomInsuranceReport\VroomInsuranceReport.rptproj", "{A995B6D1-A028-4091-BC3B-607834CF2B0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A995B6D1-A028-4091-BC3B-607834CF2B0C}.Debug|Default.ActiveCfg = Debug
+		{A995B6D1-A028-4091-BC3B-607834CF2B0C}.Debug|Default.Build.0 = Debug
+		{A995B6D1-A028-4091-BC3B-607834CF2B0C}.Debug|Default.Deploy.0 = Debug
+		{A995B6D1-A028-4091-BC3B-607834CF2B0C}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{A995B6D1-A028-4091-BC3B-607834CF2B0C}.DebugLocal|Default.Build.0 = DebugLocal
+		{A995B6D1-A028-4091-BC3B-607834CF2B0C}.Release|Default.ActiveCfg = Release
+		{A995B6D1-A028-4091-BC3B-607834CF2B0C}.Release|Default.Build.0 = Release
+		{A995B6D1-A028-4091-BC3B-607834CF2B0C}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C1DF71E-0CBE-4BD9-8DE3-2DC5B6E07E66}
+	EndGlobalSection
+EndGlobal
