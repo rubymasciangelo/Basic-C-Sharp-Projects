@@ -6,10 +6,9 @@
     <DataSource Name="Movies">
       <ConnectionProperties>
         <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Movies</ConnectString>
-        <IntegratedSecurity>true</IntegratedSecurity>
+        <ConnectString />
       </ConnectionProperties>
-      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>972c4464-ff3e-4094-ac1e-1afe5522b49a</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -110,7 +109,7 @@ FROM
             </Paragraphs>
             <rd:DefaultName>textbox1</rd:DefaultName>
             <Height>0.43in</Height>
-            <Width>5.5in</Width>
+            <Width>5.60416in</Width>
             <Style>
               <BackgroundColor>Silver</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
@@ -123,7 +122,7 @@ FROM
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>5.5in</Width>
+                  <Width>5.60416in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -172,7 +171,7 @@ FROM
                                     <Width>1.17708in</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.30208in</Width>
+                                    <Width>1.40625in</Width>
                                   </TablixColumn>
                                   <TablixColumn>
                                     <Width>1.20833in</Width>
@@ -706,7 +705,7 @@ FROM
                               <DataSetName>DataSet1</DataSetName>
                               <Top>0.5in</Top>
                               <Height>0.64in</Height>
-                              <Width>5.5in</Width>
+                              <Width>5.60416in</Width>
                               <ZIndex>1</ZIndex>
                               <Style>
                                 <FontFamily />
@@ -754,7 +753,7 @@ FROM
             </PageBreak>
             <Top>0.43in</Top>
             <Height>1.14in</Height>
-            <Width>5.5in</Width>
+            <Width>5.60416in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <FontSize>14pt</FontSize>
@@ -764,7 +763,7 @@ FROM
         <Height>1.57in</Height>
         <Style />
       </Body>
-      <Width>5.5in</Width>
+      <Width>5.60416in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
